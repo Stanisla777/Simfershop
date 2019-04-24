@@ -201,6 +201,7 @@ button:focus {
   padding-top: 92%;
 }
 .ab-slider-history__content {
+  width: 97%;
   position: absolute;
   top: 0;
   left: 0;
@@ -273,15 +274,13 @@ button:focus {
   margin-top: 20px;
 }
 .ab-advantages-company__item {
-    width: 30%;
-    box-shadow: 0 0 7px 0px #707070;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 30px;
-    padding-bottom: 77px;
-    padding-left: 10px;
-    padding-right: 10px;
+  width: 30%;
+  box-shadow: 0 0 7px 0px #707070;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 77px;
 }
 .ab-advantages-company__title {
   font-size: 30px;
@@ -293,11 +292,11 @@ button:focus {
   font-size: 40px;
 }
 .ab-advantages-company__description {
-    margin-top: 20px;
-    text-align: center;
-    color: #460606;
-    font-size: 22px;
-    font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+  color: #460606;
+  font-size: 24px;
+  font-weight: 500;
 }
 .h3-ttle {
   font-size: 22px;
@@ -308,14 +307,15 @@ button:focus {
 .country-production .row-4-column {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 .country-production .row-4-column__col {
   position: relative;
-  width: calc(100%/4 - 15px*2);
-  margin-left: 15px;
-  margin-right: 15px;
+  width: calc(100%/4 - 8px*2);
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 16px;
 }
 .country-production .h3-ttle {
   margin-top: 20px;

@@ -211,6 +211,7 @@ button:focus{
     z-index: 2;
   }
   &__item{
+
     &:before{
       content: "";
       display: block;
@@ -221,6 +222,7 @@ button:focus{
     background-position: center;
   }
   &__content{
+    width: 97%;
     position: absolute;
     top: 0;
     left: 0;
@@ -347,7 +349,7 @@ button:focus{
   padding: 0;
 }
 
-@margin:15px;
+@margin:8px;
 .country-production .row-4-column{
   display: flex;
   flex-wrap: wrap;
@@ -361,6 +363,7 @@ button:focus{
   width: calc(100%/4 - @margin*2);
   margin-left: @margin;
   margin-right: @margin;
+  margin-bottom: 16px;
 }
 
 .country-production .h3-ttle{

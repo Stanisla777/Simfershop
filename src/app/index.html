@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
 
 </head>
@@ -59,7 +60,7 @@
 
                     <div class="owl-carousel">
 
-                        <div style="background-image: url('img/WideFilmKnockout3cc2.png')"
+                        <div style="background-image: url('img/WideFilmKnockout3cc22.png')"
                              class="ab-slider-history__item">
                             <div class="ab-slider-history__content">
                                 <p class="ab-slider-history__year">1977</p>
@@ -69,7 +70,7 @@
 
                             </div>
                         </div>
-                        <div style="background-image: url('img/WideFilmKnockout3cc3.png')"
+                        <div style="background-image: url('img/WideFilmKnockout3cc33.png')"
                              class="ab-slider-history__item">
                             <div class="ab-slider-history__content">
                                 <p class="ab-slider-history__year">1997</p>
@@ -79,7 +80,7 @@
 
                             </div>
                         </div>
-                        <div style="background-image: url('img/WideFilmKnockout3cc4.png')"
+                        <div style="background-image: url('img/WideFilmKnockout3cc44.png')"
                              class="ab-slider-history__item">
                             <div class="ab-slider-history__content">
                                 <p class="ab-slider-history__year">2004</p>
@@ -89,7 +90,7 @@
 
                             </div>
                         </div>
-                        <div style="background-image: url('img/WideFilmKnockout3cc5.png')"
+                        <div style="background-image: url('img/WideFilmKnockout3cc55.png')"
                              class="ab-slider-history__item">
                             <div class="ab-slider-history__content">
                                 <p class="ab-slider-history__year">2013</p>
@@ -99,7 +100,7 @@
 
                             </div>
                         </div>
-                        <div style="background-image: url('img/WideFilmKnockout3cc6.png')"
+                        <div style="background-image: url('img/WideFilmKnockout3cc66.png')"
                              class="ab-slider-history__item">
                             <div class="ab-slider-history__content">
                                 <p class="ab-slider-history__year">2015</p>
@@ -109,7 +110,7 @@
 
                             </div>
                         </div>
-                        <div style="background-image: url('img/WideFilmKnockout3cc7.png')"
+                        <div style="background-image: url('img/WideFilmKnockout3cc77.png')"
                              class="ab-slider-history__item">
                             <div class="ab-slider-history__content">
                                 <p class="ab-slider-history__year">2016</p>
@@ -120,7 +121,7 @@
                             </div>
                         </div>
 
-                        <div style="background-image: url('img/WideFilmKnockout3cc8.png')"
+                        <div style="background-image: url('img/WideFilmKnockout3cc88.png')"
                              class="ab-slider-history__item">
                             <div class="ab-slider-history__content">
                                 <p class="ab-slider-history__year">2017</p>
@@ -156,7 +157,7 @@
 
         </div>
 
-        <div style="background-image: url('img/ServSeti3.jpg')" class="ab-advantages-company__item row-4-column__col">
+        <div style="background-image: url('img/ServSeti2.jpg')" class="ab-advantages-company__item row-4-column__col">
 
             <p class="ab-advantages-company__title"><span>350</span></p>
             <p class="ab-advantages-company__description">
@@ -227,34 +228,53 @@
         $(document).ready(function() {
             // /Слайдер отзывы
             $('.ab-slider-history .owl-carousel').owlCarousel({
-//                loop:true, //Зацикливаем слайдер
-//                 margin:6, //Отступ от элемента справа в 50px
+
                 dots:false,
                 nav:false, //Отключение навигации
                 navText : ['',''],
-                items:3,
+                // items:3,
                 // autoHeight: true,
                 // slideBy:1,
                 loop:true,
+                onInitialized: function(){
+                    // maxheight();
+                    setTimeout(maxheight, 1000);
+                },
                 // autoplay:true,
                 // autoplayTimeout:10000,
                 // autoplaySpeed:10000,
                 // autoplayHoverPause:true
-            });
-
-            /*Выравниваю текст по высоте*/
-            var maxheight=0;
-            $('.ab-slider-history__content .ab-slider-history__description').each(function(){
-                height = $(this).height();
-
-                if(height>maxheight){
-                    maxheight = height
-
+                responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                    0:{
+                        items:1
+                    },
+                    650:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
                 }
 
             });
 
-            $('.ab-slider-history__content .ab-slider-history__description').css('min-height',maxheight);
+            /*Выравниваю текст по высоте*/
+
+            function  maxheight() {
+                var maxheight=0;
+                $('.ab-slider-history__content .ab-slider-history__description').each(function(){
+                    height = $(this).outerHeight(false);
+
+                    if(height>maxheight){
+                        maxheight = height
+
+                    }
+
+                });
+                $('.ab-slider-history__content .ab-slider-history__description').css('min-height',maxheight);
+            }
+
+
 
 
         })

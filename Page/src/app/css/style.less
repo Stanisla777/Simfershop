@@ -1,0 +1,339 @@
+
+/*------------------------------*/
+.flex-sp-bet(){
+  display: flex;
+  justify-content: space-between;
+}
+.flex-sp-bet-al-cen(){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-al-cen(){
+  display: flex;
+  align-items: center;
+}
+.flex-center-cen(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//моя сетка
+
+//row-center - класс для коробок, которые имеют одинаковые медиа-запросы
+//col-product - класс для элементов коробки, которые имеют одинаковые медиа-запросы
+//у индивидуальных коробок названия класса должен заканчиваться на -row-center(grid-line-row-center)
+//у индивидуальных элементов коробки названия класса должен заканчиваться на -col-wrapper(col-test-col-wrapper)
+
+
+
+@margin:15px; //мэрджин по умолчанию
+
+//примесь для любого row(контейнера)
+.flex-grid-wrap-juf-con-cen(){
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: @margin * -1;
+  margin-right: @margin * -1;
+};
+//примесь для любого класса col(элементов в блоке)
+.margin-left-right-grid(@margin){
+  margin-left: @margin;
+  margin-right: @margin;
+};
+
+//переменная для меняющихся классов
+.perem-for-row-col(){ //переменную, которую вставляем в медиа запрос
+  .media-row-col(@marg,(12/@count_col),@class_row,@class_col);//переменные описаны в медиа-запросе
+};
+//переменная для постоянных классов
+.perem-for-row-col-default(){ //переменную, которую вставляем в медиа запрос
+  .media-row-col-default(@marg,(12/@count_col),@class_row);//переменные описаны в медиа-запросе
+};
+//переменная для 6 колоночной системы
+.perem-for-row-col-default-2(){ //переменную, которую вставляем в медиа запрос
+  .media-row-col-default-2(@marg,(12/@count_col),@class_row);//переменные описаны в медиа-запросе
+};
+//Примесь формирующая размер блока(колонки)
+.size(@n,@mar){//размер блока
+  @atom:100% / 12 * @n;//переменная в которую запишем размер отдельной ячейки
+  width: calc(@atom - @mar);
+};
+//Примесь формирующая медиа-запрос
+.md-block(@content,@size-media){
+  @media screen and (max-width: @size-media){
+    @content()
+  }
+};
+//Функция, когда у нас коробка имеет класс row-center, а элементы col-product
+.media-row-col-default(@marg,@n,@sel_row){//функция которая объединет общую коробку и элементы в ней
+  @{sel_row}.row-center{//.new-row.row-center{}
+    margin-left: -@marg;
+    margin-right: -@marg;
+  }
+
+  @{sel_row} .col-wrapper-6{//.new-row .col-product{}
+    .size(@n,@marg * 2);
+    margin-left: @marg;
+    margin-right: @marg;
+  }
+  @{sel_row} .col-wrapper-3{//.new-row .col-product{}
+    .size(@n,@marg * 2);
+    margin-left: @marg;
+    margin-right: @marg;
+  }
+  @{sel_row} .col-wrapper-4{//.new-row .col-product{}
+    .size(@n,@marg * 2);
+    margin-left: @marg;
+    margin-right: @marg;
+  }
+
+};
+//Та же что и выше, тлько для  6 колоночного ряда
+.media-row-col-default-2(@marg,@n,@sel_row){
+  @{sel_row}.row-center{//.new-row.row-center{}
+    margin-left: -@marg;
+    margin-right: -@marg;
+  }
+  @{sel_row} .col-wrapper-2{//.new-row .col-product{}
+    .size(@n,@marg * 2);
+    margin-left: @marg;
+    margin-right: @marg;
+  }
+}
+
+
+//Функция, с возможностью подставлять селекторы тегов
+.media-row-col(@marg,@n,@sel_row,@sel_col){
+  @{sel_row}-row-center{//-row-center в названии класса у коробки обязательно
+    margin-left: -@marg;
+    margin-right: -@marg;
+  }
+  @{sel_col}-col-wrapper{//-col-wrapper в названии класса у элементов обязательно
+    .size(@n,@marg * 2);
+    margin-left: @marg;
+    margin-right: @marg;
+  }
+}
+//медиа запрос для менЮщихся классов
+.md-block({//медиа-запрос
+  @marg:15px; //если меняется пэдинг
+  @count_col:2; //количество столбцов
+  @class_row:.grid-line; //начало названия класса коробки
+  @class_col:.col-test;//начало названия класса элементов
+  .perem-for-row-col();//переменная для упрощения записи
+},perem-px);
+
+//медиа запрос для дефолтных классов
+.md-block({//медиа-запрос
+  @marg:15px; //если меняется пэдинг
+  @count_col:2; //количество столбцов
+  @class_row:{};//по умолчанию не подставляется ничего
+  .perem-for-row-col-default();//переменная для упрощения записи
+},perem-px);
+//медиа запрос для дефолтных классов с 6 колонками
+.md-block({//медиа-запрос
+  @marg:15px; //если меняется пэдинг
+  @count_col:3; //количество столбцов
+  @class_row:{};//по умолчанию не подставляется ничего
+  .perem-for-row-col-default-2();//переменная для упрощения записи
+},perem-px);
+
+//Элемент row(коробка) неменяющегося класса
+.row-center{
+  .flex-grid-wrap-juf-con-cen();
+}
+.min-width(@min_width){
+  min-width: @min_width;
+}
+
+.col-wrapper-3{
+  margin-left: @margin;
+  margin-right: @margin;
+  .size(3,@margin * 2);
+}
+.col-wrapper-4{
+  margin-left: @margin;
+  margin-right: @margin;
+  .size(4,@margin * 2);
+}
+.col-wrapper-6{
+  margin-left: @margin;
+  margin-right: @margin;
+  .size(6,@margin * 2);
+}
+
+.col-wrapper-2{
+  margin-left: @margin;
+  margin-right: @margin;
+  .size(2,@margin * 2);
+}
+.count-col(@n){
+  .size(12/@n,@margin * 2);
+}
+
+.md-block({//медиа-запрос
+  @marg:15px; //если меняется пэдинг
+  @count_col:2; //количество столбцов
+  @class_row:.wrapper-product-line;//по умолчанию не подставляется ничего
+  .perem-for-row-col-default();//переменная для упрощения записи
+},992px);
+
+.md-block({//медиа-запрос
+  @marg:15px; //если меняется пэдинг
+  @count_col:2; //количество столбцов
+  @class_row:{};//по умолчанию не подставляется ничего
+  .perem-for-row-col-default();//переменная для упрощения записи
+},992px);
+
+
+.md-block({//медиа-запрос
+  @marg:15px; //если меняется пэдинг
+  @count_col:1; //количество столбцов
+  @class_row:{};//по умолчанию не подставляется ничего
+  .perem-for-row-col-default();//переменная для упрощения записи
+},576px);
+
+.md-block({//медиа-запрос
+  @marg:0px; //если меняется пэдинг
+  @count_col:1; //количество столбцов
+  @class_row:{};//по умолчанию не подставляется ничего
+  .perem-for-row-col-default();//переменная для упрощения записи
+},425px);
+
+//медиа-запрос для 6 колоночной системы
+.md-block({//медиа-запрос
+  @marg:15px; //если меняется пэдинг
+  @count_col:3; //количество столбцов
+  @class_row:{};//по умолчанию не подставляется ничего
+  .perem-for-row-col-default-2();//переменная для упрощения записи
+},990px);
+
+
+
+
+
+//Моя сетка
+
+
+
+
+
+
+
+/
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+.col-col-col{
+  border: 1px solid;
+  min-height: 60px;
+  margin-bottom: 10px;
+  min-width: 150px;
+}
+.md-block({//медиа-запрос
+  @marg:15px; //если меняется пэдинг
+  @count_col:3; //количество столбцов
+  @class_row:{};//по умолчанию не подставляется ничего
+  .perem-for-row-col-default-2();//переменная для упрощения записи
+},990px);
+
+
+
+
+.count-col(@n,@margin){
+  .size(@n,@margin * 2);
+}
+.row-center-col{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-col{
+  @margin:20px;
+  .margin-left-right-grid(@margin);
+  border: 1px solid;
+  min-height: 60px;
+}
+.col-col-1{
+  .count-col(7.5,20px)
+}
+.col-col-2{
+  .count-col(4.5,20px)
+}
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+
+
+
+
+.display-xl(@margin,@col){
+  .md-block({
+    margin-left:@margin;
+    margin-right: @margin;
+    .size(@col,@margin * 2);
+  },1280px);
+}
+.display-lg(@margin,@col){
+  .md-block({
+    margin-left:@margin;
+    margin-right: @margin;
+    .size(@col,@margin * 2);
+  },992px);
+}
+.display-md(@margin,@col){
+  .md-block({
+    margin-left:@margin;
+    margin-right: @margin;
+    .size(@col,@margin * 2);
+  },768px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 890px){
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
