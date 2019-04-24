@@ -130,6 +130,7 @@ button:focus {
   font-weight: 500;
   text-align: center;
   color: #de013e;
+  padding: 0;
 }
 .ab-main-information {
   display: flex;
@@ -163,9 +164,23 @@ button:focus {
 .ab-video__video:before {
   content: "";
   display: block;
-  padding-top: 60%;
+  padding-top: 56%;
 }
 /*Слайдер*/
+.ab-camera {
+  position: absolute;
+  top: -2%;
+  transform: rotate(-17deg);
+  width: 90px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.ab-camera:before {
+  content: "";
+  display: block;
+  padding-top: 120%;
+}
 .ab-slider-history {
   position: relative;
   margin-top: 50px;
@@ -198,14 +213,15 @@ button:focus {
   right: 9%;
   color: #dc1749;
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .ab-slider-history__description {
   font-size: 20px;
   position: absolute;
-  bottom: 29%;
+  bottom: 16%;
   left: 6%;
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 26px;
 }
 .country-production {
   margin-top: 40px;
@@ -214,19 +230,8 @@ button:focus {
 .country-production .h2-title {
   margin-bottom: 12px;
 }
-.ab-camera {
-  position: absolute;
-  top: -2%;
-  transform: rotate(-17deg);
-  width: 90px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.ab-camera:before {
-  content: "";
-  display: block;
-  padding-top: 120%;
+.country-production p {
+  padding: 0;
 }
 .ab-company-advantages {
   margin-top: 18px;
@@ -243,8 +248,11 @@ button:focus {
   content: "";
   width: 30px;
   height: 27px;
-  background: url(../img/IconGarant.png) center no-repeat;
+  background-image: url("../img/IconGarant.png");
   background-size: cover;
+}
+.ab-company-advantages ul {
+  padding: 0;
 }
 .company-advantages-title {
   font-size: 22px;
@@ -254,9 +262,62 @@ button:focus {
 }
 .ab-slogan {
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 33px;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 50px;
+}
+/*премущества*/
+.ab-advantages-company {
+  margin-top: 20px;
+}
+.ab-advantages-company__item {
+    width: 30%;
+    box-shadow: 0 0 7px 0px #707070;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 77px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.ab-advantages-company__title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #460606;
+}
+.ab-advantages-company__title span {
+  font-size: 40px;
+}
+.ab-advantages-company__description {
+    margin-top: 20px;
+    text-align: center;
+    color: #460606;
+    font-size: 22px;
+    font-weight: 600;
+}
+.h3-ttle {
+  font-size: 22px;
+  font-weight: 500;
+  color: #de013e;
+  padding: 0;
+}
+.country-production .row-4-column {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.country-production .row-4-column__col {
+  position: relative;
+  width: calc(100%/4 - 15px*2);
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.country-production .h3-ttle {
+  margin-top: 20px;
 }
 /*------------------------------*/
