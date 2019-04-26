@@ -352,6 +352,12 @@
 
             //Слайдер сертификаты
 
+            $(".wrapper-certificates-and-awards .owl-carousel").on('initialized.owl.carousel', function(event) {
+                maxheight_2();
+            });
+
+
+
             $('.wrapper-certificates-and-awards .owl-carousel').owlCarousel({
 
                 dots:false,
@@ -363,7 +369,8 @@
                 // slideBy:1,
                 loop:true,
                 onInitialized: function(){
-                    setTimeout(maxheight_2, 500);
+                    // setTimeout(maxheight_2, 500);
+                    // maxheight_2()
                 },
 
                 responsive:{
