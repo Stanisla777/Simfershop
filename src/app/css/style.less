@@ -126,69 +126,64 @@ button:focus{
 
 /*Баннер*/
 
-.ab-main-banner{
+.ab-main-banner {
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 0 9px 0 #928e8e;
-  &:before{
-    content: "";
-    display: block;
-    padding-top: 30%;
-  }
+}
+.ab-main-banner:before {
+  content: "";
+  display: block;
+  padding-top: 30%;
 }
 
-
-.h2-title{
+.h2-title {
   font-size: 30px;
   font-weight: 500;
   text-align: center;
   color: #de013e;
   padding: 0;
 }
-
-.ab-main-information{
+.ab-main-information {
   display: flex;
   align-items: flex-start;
   margin-top: 50px;
 }
-
-.ab-main-about-company{
+.ab-main-about-company {
   width: 50%;
   margin-right: 10px;
   line-height: 30px;
-  p{
-    font-size: 18px;
-    &:not(:last-child){
-      margin-bottom: 10px;
-    }
-  }
 }
-.ab-video__video{
-    position: relative;
-    width: calc(100% - 50% - 10px);
-    border: 1px solid;
-    iframe{
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-    &:before{
-      content: "";
-      display: block;
-      padding-top: 56%;
-    }
-
+.ab-main-about-company p {
+  font-size: 18px;
 }
-
-
+.ab-main-about-company p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.ab-video__video {
+  position: relative;
+  width: calc(100% - 50% - 10px);
+  border: 1px solid;
+}
+.ab-video__video iframe {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.ab-video__video:before {
+  content: "";
+  display: block;
+  padding-top: 56%;
+}
 
 /*Слайдер*/
-.ab-camera{
+
+.ab-camera {
   position: absolute;
   top: -2%;
   transform: rotate(-17deg);
@@ -196,107 +191,98 @@ button:focus{
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  &:before{
-    content: "";
-    display: block;
-    padding-top: 120%;
-  }
 }
-.ab-slider-history{
+.ab-camera:before {
+  content: "";
+  display: block;
+  padding-top: 120%;
+}
+.ab-slider-history {
   position: relative;
   margin-top: 50px;
-  .owl-carousel{
-    margin-top: 20px;
-    position: relative;
-    z-index: 2;
-  }
-  &__item{
-
-    &:before{
-      content: "";
-      display: block;
-      padding-top: 92%;
-    }
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &__content{
-    width: 97%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  &__year{
-    position: absolute;
-    top: 20%;
-    right: 9%;
-    color: #dc1749;
-    font-size: 40px;
-    font-weight: 600;
-  }
-  &__description{
-    font-size: 20px;
-    position: absolute;
-    bottom: 16%;
-    left: 6%;
-    font-weight: 600;
-    line-height: 26px;
-    //min-height: 100px;
-  }
+}
+.ab-slider-history .owl-carousel {
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+.ab-slider-history__item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ab-slider-history__item:before {
+  content: "";
+  display: block;
+  padding-top: 92%;
+}
+.ab-slider-history__content {
+  position: absolute;
+  width: 97%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.ab-slider-history__year {
+  position: absolute;
+  top: 20%;
+  right: 9%;
+  color: #dc1749;
+  font-size: 40px;
+  font-weight: 600;
+}
+.ab-slider-history__description {
+  font-size: 20px;
+  position: absolute;
+  bottom: 22%;
+  left: 6%;
+  font-weight: 600;
+  line-height: 26px;
+  /*min-height: 100px;*/
 }
 
-.country-production{
+
+.country-production {
   margin-top: 40px;
   line-height: 30px;
-  .h2-title{
-    margin-bottom: 12px;
-  }
-  p{
-    padding: 0;
-  }
 }
-
-
-
-.ab-slider-history{
-
+.country-production .h2-title {
+  margin-bottom: 12px;
 }
-
-.ab-company-advantages{
+.country-production p {
+  padding: 0;
+}
+.ab-company-advantages {
   margin-top: 18px;
-  ul{
-    li{
-      font-size: 18px;
-      display: flex;
-      &:not(:last-child){
-        margin-bottom: 15px;
-      }
-      &:before{
-        margin-right: 10px;
-        content: "";
-        width: 30px;
-        height: 27px;
-        background-image: url("../img/IconGarant.png");
-        background-size: cover;
-      }
-    }
-  }
-
 }
 .ab-company-advantages ul{
   padding: 0;
+  margin-top: 15px;
 }
-.company-advantages-title{
+.ab-company-advantages ul li {
+  font-size: 18px;
+  display: flex;
+}
+.ab-company-advantages ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.ab-company-advantages ul li:before {
+  margin-right: 10px;
+  content: "";
+  width: 30px;
+  height: 27px;
+  background-image: url("../img/IconGarant.png");
+  background-size: cover;
+  flex-shrink: 0;
+}
+.company-advantages-title {
   font-size: 22px;
   color: #de013e;
   font-weight: 500;
   margin-top: 25px;
 }
-
-.ab-slogan{
+.ab-slogan {
   font-size: 25px;
   font-weight: 600;
   line-height: 33px;
@@ -305,70 +291,128 @@ button:focus{
   margin-bottom: 50px;
 }
 
-
-/*премущества*/
-.ab-advantages-company{
+.ab-advantages-company {
   margin-top: 20px;
-  &__item{
-    width: 30%;
-    box-shadow: 0 0 7px 0px #707070;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 30px;
-    padding-bottom: 77px;
-    //&:before{
-    //  content: "";
-    //  display: block;
-    //  padding-top: 60%;
-    //}
-  }
-  &__title{
-    font-size: 30px;
-    //color: #000;
-    font-weight: 600;
-    text-align: center;
-    color: #460606;
-    span{
-      font-size: 40px;
-    }
-  }
-  &__description{
-    margin-top: 20px;
-    text-align: center;
-    color: #460606;
-    font-size: 24px;
-    font-weight: 500;
-  }
 }
-
-.h3-ttle{
+.ab-advantages-company__item {
+  width: 30%;
+  box-shadow: 0 0 7px 0px #707070;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 77px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ab-advantages-company__title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #460606;
+}
+.ab-advantages-company__title span {
+  font-size: 40px;
+}
+.ab-advantages-company__description {
+  margin-top: 20px;
+  text-align: center;
+  color: #460606;
+  font-size: 22px;
+  font-weight: 600;
+}
+.h3-ttle {
   font-size: 22px;
   font-weight: 500;
   color: #de013e;
   padding: 0;
 }
-
-@margin:8px;
-.country-production .row-4-column{
+.country-production .row-4-column {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -@margin;
-  margin-right:-@margin;
+  margin-left: -8px;
+  margin-right: -8px;
 }
-
-
 .country-production .row-4-column__col {
   position: relative;
-  width: calc(100%/4 - @margin*2);
-  margin-left: @margin;
-  margin-right: @margin;
+  width: calc(100%/4 - 8px*2);
+  margin-left: 8px;
+  margin-right: 8px;
   margin-bottom: 16px;
 }
-
-.country-production .h3-ttle{
+.country-production .h3-ttle {
   margin-top: 20px;
 }
+
+
+/*Наша цель*/
+.ab-purpose-company{
+  margin-top: 30px;
+}
+
+.wrapper-certificates-and-awards{
+  .owl-stage{
+    //display: flex;
+  }
+  .owl-item{
+    //border: 1px solid #d5d5d5;
+  }
+}
+
+.block-certificates{
+  //width: 33%;
+  height: 100%;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  padding: 10px;
+  &__img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60%;
+    margin: 0 auto;
+    //border: 1px solid #d5d5d5;
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__description{
+    p{
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

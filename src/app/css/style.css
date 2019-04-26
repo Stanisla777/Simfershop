@@ -201,8 +201,8 @@ button:focus {
   padding-top: 92%;
 }
 .ab-slider-history__content {
-  width: 97%;
   position: absolute;
+  width: 97%;
   top: 0;
   left: 0;
   right: 0;
@@ -219,10 +219,11 @@ button:focus {
 .ab-slider-history__description {
   font-size: 20px;
   position: absolute;
-  bottom: 16%;
+  bottom: 22%;
   left: 6%;
   font-weight: 600;
   line-height: 26px;
+  /*min-height: 100px;*/
 }
 .country-production {
   margin-top: 40px;
@@ -236,6 +237,10 @@ button:focus {
 }
 .ab-company-advantages {
   margin-top: 18px;
+}
+.ab-company-advantages ul {
+  padding: 0;
+  margin-top: 15px;
 }
 .ab-company-advantages ul li {
   font-size: 18px;
@@ -251,9 +256,7 @@ button:focus {
   height: 27px;
   background-image: url("../img/IconGarant.png");
   background-size: cover;
-}
-.ab-company-advantages ul {
-  padding: 0;
+  flex-shrink: 0;
 }
 .company-advantages-title {
   font-size: 22px;
@@ -269,7 +272,6 @@ button:focus {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-/*премущества*/
 .ab-advantages-company {
   margin-top: 20px;
 }
@@ -281,6 +283,8 @@ button:focus {
   background-size: cover;
   padding-top: 30px;
   padding-bottom: 77px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .ab-advantages-company__title {
   font-size: 30px;
@@ -295,8 +299,8 @@ button:focus {
   margin-top: 20px;
   text-align: center;
   color: #460606;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
 }
 .h3-ttle {
   font-size: 22px;
@@ -319,5 +323,32 @@ button:focus {
 }
 .country-production .h3-ttle {
   margin-top: 20px;
+}
+/*Наша цель*/
+.ab-purpose-company {
+  margin-top: 30px;
+}
+.block-certificates {
+  height: 100%;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  padding: 10px;
+}
+.block-certificates__img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+}
+.block-certificates__img:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.block-certificates__description p {
+  margin-top: 20px;
+  text-align: center;
 }
 /*------------------------------*/
