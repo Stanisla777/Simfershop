@@ -145,6 +145,7 @@ button:focus{
   text-align: center;
   color: #de013e;
   padding: 0;
+  line-height: 35px;
 }
 .ab-main-information {
   display: flex;
@@ -351,6 +352,7 @@ button:focus{
 }
 
 .wrapper-certificates-and-awards{
+  margin-top: 18px;
   .owl-stage{
     //display: flex;
   }
@@ -381,38 +383,163 @@ button:focus{
   }
   &__description{
     p{
+      line-height: 24px;
+      font-size: 18px;
       margin-top: 20px;
       text-align: center;
     }
   }
 }
 
+.ab-certificates-and-awards{
+  margin-top: 30px;
+}
+
+.ab-company-politic{
+  width: 82%;
+  margin: 30px auto 0;
+  p{
+    &:first-child{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.wave {
+  color: #000000;
+  animation: 2s color infinite;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@keyframes color {
+  50% {
+    color: #2d2d2d;
+  }
+}
+.company-politic__slagan{
+  min-height: 40px;
+}
+.company-politic__slagan p{
+  font-size: 22px;
+}
+.company-politic__item2{
+  span{
+    font-weight: 500;
+  }
+}
+
+.ab-news-company{
+  margin-top: 30px;
+}
+.wrapper-news-company{
+  margin-top: 20px;
+}
+
+.ab-news-block{
+  display: flex;
+  align-items: flex-start;
+  &:not(:last-child){
+    margin-bottom: 20px;
+  }
+  &__img{
+    margin-right: 25px;
+    width: 23%;
+    min-width: 210px;
+    flex-shrink: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:before{
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__description{
+    width: calc(100% - 23% - 25px);
+    p{
+      line-height: 28px;
+    }
+    h3{
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.h3-title{
+  padding: 0;
+  color: #000;
+  font-weight: 500;
+}
+
+.ab-importance-research{
+  margin-top: 30px;
+}
+
+.span-main{
+  font-weight: 500;
+}
+.h2-title-sub{
+  font-size: 20px;
+  font-weight: 500;
+  color: #de013e;
+  padding: 0;
+
+}
+.wrapper-certificates-and-awards .owl-nav{
+  max-width: max-content;
+}
+.wrapper-certificates-and-awards .owl-nav button{
+  outline: none;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  width: 60px;
+  height: 30px;
+  background-position: center!important;
+  background-repeat: no-repeat!important;
+  background-size: contain!important;
+}
+.wrapper-certificates-and-awards .owl-prev{
+  right: 0;
+  background-image: url("../img/ArrowLeft.png")!important;
+  &:hover{
+    background-image: url("../img/ArrowRightHoverc.png")!important;
+  }
+}
+
+.wrapper-certificates-and-awards .owl-next{
+  left: 0;
+  background-image: url("../img/ArrowrRight.png")!important;
+  &:hover{
+    background-image: url("../img/ArrowLeftHover.png")!important;
+  }
+}
+[class*="ab"] p{
+  padding: 0;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**/
+.wrapper-certificates-and-awards .owl-dots{
+  width: max-content;
+  margin: 10px auto;
+}
+.wrapper-certificates-and-awards .owl-dots button{
+  width: 13px;
+  height: 13px;
+  border: 1px solid;
+  border-radius: 50%;
+  margin: 0 5px;
+  &.active{
+    border: none;
+    background: #de013e;
+  }
+}
 
 
 
