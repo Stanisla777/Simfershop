@@ -133,6 +133,27 @@ button:focus {
   padding: 0;
   line-height: 35px;
 }
+.ab-main-banner {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 9px 0 #928e8e;
+}
+.ab-main-banner:before {
+  content: "";
+  display: block;
+  padding-top: 30%;
+  min-height: 120px;
+}
+.h2-title {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: #de013e;
+  padding: 0;
+  line-height: 35px;
+}
 .ab-main-information {
   display: flex;
   align-items: flex-start;
@@ -152,7 +173,6 @@ button:focus {
 .ab-video__video {
   position: relative;
   width: calc(100% - 50% - 10px);
-  border: 1px solid;
 }
 .ab-video__video iframe {
   width: 100%;
@@ -241,7 +261,6 @@ button:focus {
 }
 .ab-company-advantages ul {
   padding: 0;
-  margin-top: 15px;
 }
 .ab-company-advantages ul li {
   font-size: 18px;
@@ -324,11 +343,16 @@ button:focus {
 }
 .country-production .h3-ttle {
   margin-top: 20px;
-  min-height: 120px;
 }
 /*Наша цель*/
 .ab-purpose-company {
   margin-top: 30px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.ab-purpose-company p {
+  font-size: 18px;
+  line-height: 30px;
 }
 .wrapper-certificates-and-awards {
   margin-top: 18px;
@@ -362,8 +386,12 @@ button:focus {
   margin-top: 30px;
 }
 .ab-company-politic {
-  width: 82%;
+  /*width: 82%;*/
   margin: 30px auto 0;
+}
+.ab-company-politic p {
+  font-size: 18px;
+  line-height: 30px;
 }
 .ab-company-politic p:first-child {
   margin-bottom: 10px;
@@ -372,24 +400,24 @@ button:focus {
   color: #000000;
   animation: 2s color infinite;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 @keyframes color {
   50% {
     color: #2d2d2d;
   }
 }
-.company-politic__slagan {
-  min-height: 40px;
-}
 .company-politic__slagan p {
   font-size: 22px;
 }
+.company-politic__slagan {
+  min-height: 43px;
+}
 .company-politic__item2 span {
-  font-weight: 500;
+  font-weight: 600;
 }
 .ab-news-company {
-  margin-top: 30px;
+  margin-top: 7px;
 }
 .wrapper-news-company {
   margin-top: 20px;
@@ -432,9 +460,11 @@ button:focus {
 }
 .ab-importance-research {
   margin-top: 30px;
+  font-size: 18px;
+  line-height: 30px;
 }
 .span-main {
-  font-weight: 500;
+  font-weight: 600;
 }
 .h2-title-sub {
   font-size: 20px;
@@ -475,7 +505,6 @@ button:focus {
 [class*="ab"] p {
   padding: 0;
 }
-/**/
 .wrapper-certificates-and-awards .owl-dots {
   width: max-content;
   margin: 10px auto;
@@ -486,9 +515,10 @@ button:focus {
   border: 1px solid;
   border-radius: 50%;
   margin: 0 5px;
+  outline: none;
 }
 .wrapper-certificates-and-awards .owl-dots button.active {
-  border: none;
+  border-color: transparent;
   background: #de013e;
 }
 /*------------------------------*/

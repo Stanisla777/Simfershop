@@ -98,16 +98,16 @@ gulp.task('build-all', function () {
 
 //Автопрефиксы
 gulp.task('autoprefixer', function () {
-    gulp.src('./src/app/css/**/style.css')//выборка файлов по конкретному пути
+    gulp.src('./src/app/css/media.css')//выборка файлов по конкретному пути
 
     //даем префиксы стилям
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ['last 5 versions'],
             cascade: false
         }))
 
         .pipe(gulp.dest('./src/dist/css')); //вывод результирующего файла в папку назначения (dest — пункт назначения)
-
+ 
 });
 
 
