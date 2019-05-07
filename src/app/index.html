@@ -12,6 +12,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/wow_book.css" rel="stylesheet">
 
 </head>
 <body>
@@ -161,15 +162,38 @@
                         </div>
                     </div>
 
-                    <div class="mn-other-category">
-                        <div class="watch-all-category">
-                            <p>Посмотреть все категории</p>
+                    <!--<div class="mn-other-category">-->
+                        <!--<div class="watch-all-category">-->
+                            <!--<p>Посмотреть все категории</p>-->
+                        <!--</div>-->
+                        <!---->
+                    <!--</div>-->
+
+                </div>
+                <div class="mn-section-progress">
+
+                    <!--<div class="mn-progress">-->
+
+                    <!--</div>-->
+
+                        <div class="owl-carousel" id="features">
+                            <div style="background: red;"> fff </div>
+                            <div style="background: green;"> ddd</div>
+                            <div style="background: yellow;"> ddd</div>
+                            <div style="background: black;"> fffff </div>
+                            <div> the end </div>
                         </div>
-                        <div style="height: 400px;"></div>
 
 
-                    </div>
 
+
+                    <nav>
+                        <ul>
+                            <li><a id='back' href="#" title='Назад' >Назад</a></li>
+                            <li><a id='next' href="#" title='Вперед'>Вперед</a></li>
+                            <li><a id='first' href="#" title='В начало' >В начало</a></li>
+                        </ul>
+                    </nav>
                 </div>
 
 
@@ -180,10 +204,74 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="owl.carousel.js"></script>
+    <script src="wow_book.min.js"></script>
 
 
     <script>
         $(document).ready(function() {
+
+
+
+
+        //    Слайдер перелистывание книги
+        //     $('#mybook').wowBook({
+        //         container: true,
+        //         height : 500,
+        //         width  : 600,
+        //         controls:true,
+        //         toolbar: "back, next, first, last",
+        //         toolbarPosition: "bottom"
+        //     });
+
+
+
+            if ($(window).width()>=600){
+                $('#features').wowBook({
+                    // height : 500
+                    // ,width : 800
+                    centeredWhenClosed : true
+                    ,hardcovers : true
+                    ,turnPageDuration : 1000
+                    ,numberedPages : [1,-2]
+                    ,transparentPages : true
+                    ,controls : {
+                        next : '#next',
+                        back : '#back',
+                        first : '#first'
+
+                    }
+                })
+            }
+            else {
+                $('#features')
+                $('.owl-carousel').owlCarousel({
+
+                    dots:false,
+                    nav:false, //Отключение навигации
+                    navText : ['',''],
+                    items:1,
+                    // autoHeight: true,
+                    // slideBy:1,
+                    loop:true,
+                    onInitialized: function(){
+
+                    }
+
+                    // responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                    //     0:{
+                    //         items:1
+                    //     },
+                    //     650:{
+                    //         items:2
+                    //     },
+                    //     1000:{
+                    //         items:3
+                    //     }
+                    // }
+                });
+            }
+
+
 
 
         })
