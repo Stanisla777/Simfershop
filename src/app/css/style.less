@@ -777,30 +777,91 @@ button:focus{
 }
 
 #next{
-  width: 20px;
-  height: 20px;
-  background-color: red;
+
 }
 #back{
-  width: 20px;
-  height: 20px;
-  background-color: red;
+
 }
-.fgfgf{
-  width: 80%;
+.wowbook-handle.wowbook-left, .wowbook-handle.wowbook-right {
+  width: 30% !important;
+}
+.wowbook-handle.wowbook-right {
+  left: 70% !important;
+}
+.wowbook{
   margin: 0 auto;
+  //width: 40%!important;
+  //height: 100%!important;
+}
+
+.mn-wrapper-progress{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &:before{
     content: "";
     display: block;
-    padding-top: 80%;
+    padding-top: 40%;
+  }
+  width: 100%;
+
+  margin: 0 auto;
+  background: url("../img2/Stol.jpg")center no-repeat;
+  background-size: cover;
+  #book-progress{
+    width: 60%!important;
+    height:80%!important;
   }
 }
-.wowbook{
-  width: 100%!important;
-  //height: 100%!important;
 
+.book-progress{
+  position: absolute!important;
+  top: 42px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &__item{
 
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+    padding: 96px 10px;
+    h2{
+      //position: relative;
+      //top: 80px;
+      color: #dc1749;
+      font-size: 40px;
+      font-weight: 500;
+    }
+    p{
+      font-size: 20px;
+
+      text-align: center;
+      margin-top: 55px;
+      text-shadow: 0 0 3px #989393;
+    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
+
+.wowbook-book-shadow{
+  height: 100%!important;
+}
+//
+
+
+
+
+//.wowbook{
+//  width: 100%!important;
+//  //height: 100%!important;
+//
+//
+//}
 //#features{
 //  width: 100%!important;
 //  height: 100%!important;
@@ -809,13 +870,13 @@ button:focus{
 //}
 
 
-#features{
-  div{
-    width: 200px;
-    height: 200px;
-    //border: 1px solid;
-  }
-}
+//#features{
+//  div{
+//    width: 200px;
+//    height: 200px;
+//    //border: 1px solid;
+//  }
+//}
 
 
 

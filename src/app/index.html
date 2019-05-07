@@ -172,17 +172,48 @@
                 </div>
                 <div class="mn-section-progress">
 
-                    <!--<div class="mn-progress">-->
 
-                    <!--</div>-->
+                    <div class="mn-wrapper-progress">
+                        <div class="book-progress" id="book-progress">
+                            <div class="book-progress__item" style="background-image: url('img2/MagazSimfer.jpg')">
+                                <h2 class="h2-title">Наши достижения!</h2>
+                            </div>
 
-                        <div class="owl-carousel" id="features">
-                            <div style="background: red;"> fff </div>
-                            <div style="background: green;"> ddd</div>
-                            <div style="background: yellow;"> ddd</div>
-                            <div style="background: black;"> fffff </div>
-                            <div> the end </div>
+                            <div  class="book-progress__item" style="background-image: url('img2/MagazSimfer.jpg')">
+                                <h2 class="">1977</h2>
+                                <p>
+                                    Увеличение производственных площадей до 215 000 м2
+                                </p>
+                            </div>
+
+                            <div class="book-progress__item" style="background-image: url('img2/MagazSimfer.jpg')">
+                                <h2 class="">1986</h2>
+                                <p>
+                                    Производство холодильного оборудования бытового и торгового назначения
+                                </p>
+                            </div>
+
+                            <div class="book-progress__item" style="">
+                                <h2 class="">1986</h2>
+                                <p>Производство отдельностоящих плит</p>
+                            </div>
+
+                            <div class="book-progress__item" style="">
+                                <p>Производство отдельностоящих плит</p>
+                            </div>
+
+                            <div class="book-progress__item" style="">
+                                <p>Производство отдельностоящих плит</p>
+                            </div>
+
+                            <div class="book-progress__item" style="">
+                                <p>Производство отдельностоящих плит</p>
+                            </div>
+
                         </div>
+                    </div>
+
+
 
 
 
@@ -225,15 +256,18 @@
 
 
 
-            if ($(window).width()>=600){
-                $('#features').wowBook({
-                    // height : 500
-                    // ,width : 800
-                    centeredWhenClosed : true
-                    ,hardcovers : true
-                    ,turnPageDuration : 1000
-                    ,numberedPages : [1,-2]
-                    ,transparentPages : true
+            // if ($(window).width()>=600){
+                $('#book-progress').wowBook({
+                    height : 500,
+                    width : 800,
+                    // container: true,
+                    centeredWhenClosed : true,
+                    hardcovers : true,
+                    responsiveHandleWidth : 100
+                    // ,hardcovers : true
+                    // ,turnPageDuration : 1000
+                    // ,numberedPages : [2,-2]
+                    // ,transparentPages : true
                     ,controls : {
                         next : '#next',
                         back : '#back',
@@ -241,35 +275,35 @@
 
                     }
                 })
-            }
-            else {
-                $('#features')
-                $('.owl-carousel').owlCarousel({
-
-                    dots:false,
-                    nav:false, //Отключение навигации
-                    navText : ['',''],
-                    items:1,
-                    // autoHeight: true,
-                    // slideBy:1,
-                    loop:true,
-                    onInitialized: function(){
-
-                    }
-
-                    // responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
-                    //     0:{
-                    //         items:1
-                    //     },
-                    //     650:{
-                    //         items:2
-                    //     },
-                    //     1000:{
-                    //         items:3
-                    //     }
-                    // }
-                });
-            }
+            // }
+            // else {
+            //     $('#features').addClass('owl-carousel');
+            //     $('.owl-carousel').owlCarousel({
+            //
+            //         dots:false,
+            //         nav:false, //Отключение навигации
+            //         navText : ['',''],
+            //         items:1,
+            //         // autoHeight: true,
+            //         // slideBy:1,
+            //         loop:true,
+            //         onInitialized: function(){
+            //
+            //         }
+            //
+            //         // responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+            //         //     0:{
+            //         //         items:1
+            //         //     },
+            //         //     650:{
+            //         //         items:2
+            //         //     },
+            //         //     1000:{
+            //         //         items:3
+            //         //     }
+            //         // }
+            //     });
+            // }
 
 
 
