@@ -1,40 +1,14 @@
 @media screen and (max-width: 980px){
 
-    .country-production .row-4-column__col {
-        width: calc(100%/2  - 16px);
-    }
-    .ab-news-block{
-        flex-direction: column;
-    }
-    .ab-news-block:not(:last-child):after{
-        content: "";
-        width: 50%;
-        height: 1px;
-        background-color: #9a9a9a;
-        display: block;
-        margin: 20px auto 25px;
-
-    }
-    .ab-news-block__img{
-        margin: 0 auto 20px;
-    }
-    .ab-news-block__img{
-        width: 30%;
-    }
-    .ab-news-block__description{
-        width: 100%;
-    }
-    .ab-news-block__description h3{
+    .book-progress__item p {
+        font-size: 17px;
+        line-height: 28px;
         text-align: center;
-        font-size: 21px;
-        font-weight: 600;
-        line-height: 31px;
+        margin-top: 15px;
+        text-shadow: 0 0 3px #989393;
     }
-    .ab-news-block:not(:last-child) {
-        margin-bottom: 0;
-    }
-    .ab-news-block__description p{
-        /*text-align: justify;*/
+    .book-progress__item:not(.book-progress__item-cover) {
+        padding: 30px 10px;
     }
 }
 
