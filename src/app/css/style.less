@@ -655,6 +655,7 @@ button:focus{
     background-size: cover;
     box-shadow: 0 0 6px 0 #bfbdbd;
     border-radius: 7px;
+
     &:before{
       content: "";
       display: block;
@@ -836,12 +837,13 @@ button:focus{
 }
 .mn-wrapper-progress__owl .owl-carousel{/*Добавил*/
   width: 50%;
+  min-width: 280px;
   margin: 0 auto;
 }
 .mn-wrapper-progress__owl .owl-nav{
   width: max-content;
   display: flex;
-  margin: 0 auto;
+  margin:  20px auto 0;
   button{
     outline: none;
     border: none;
@@ -873,7 +875,7 @@ button:focus{
   bottom: 0;
   &__item{
     &:not(.book-progress__item-cover){
-      padding: 96px 10px 0;/*Добавил*/
+      padding: 96px 10px 50px;/*Добавил*/
       h2{
         color: #dc1749;
 
@@ -998,7 +1000,7 @@ button:focus{
     }
   }
   iframe{
-    display: block;
+    display: none;
     cursor: pointer;
     position: absolute;
     top: 5.6%;
@@ -1024,10 +1026,12 @@ button:focus{
   justify-content: space-around;
   &__description{
     width: 35%;
+    min-width: 220px;
   }
   &__percent{
     margin: 15px auto 0;
     width: 60%;
+    //min-width: 138px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1056,9 +1060,8 @@ button:focus{
 .capture-form-offer {
   margin-top: 5px;
   width: 27%;
-  //box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+  min-width: 300px;
 
-  //padding: 20px 20px 55px;
   border-radius: 12px;
   text-align: center;
 }

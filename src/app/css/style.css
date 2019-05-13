@@ -769,12 +769,13 @@ button:focus {
 .mn-wrapper-progress__owl .owl-carousel {
   /*Добавил*/
   width: 50%;
+  min-width: 280px;
   margin: 0 auto;
 }
 .mn-wrapper-progress__owl .owl-nav {
   width: max-content;
   display: flex;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 .mn-wrapper-progress__owl .owl-nav button {
   outline: none;
@@ -811,7 +812,7 @@ button:focus {
   background-color: #ffffff;
 }
 .book-progress__item:not(.book-progress__item-cover) {
-  padding: 96px 10px 0;
+  padding: 96px 10px 50px;
   /*Добавил*/
 }
 .book-progress__item:not(.book-progress__item-cover) h2 {
@@ -914,7 +915,7 @@ button:focus {
   background-image: url("../img2/ImgVideo2h.jpg");
 }
 .mn-video iframe {
-  display: block;
+  display: none;
   cursor: pointer;
   position: absolute;
   top: 5.6%;
@@ -932,6 +933,7 @@ button:focus {
 }
 .mn-wrapper-form__description {
   width: 35%;
+  min-width: 220px;
 }
 .mn-wrapper-form__percent {
   margin: 15px auto 0;
@@ -960,6 +962,7 @@ button:focus {
 .capture-form-offer {
   margin-top: 5px;
   width: 27%;
+  min-width: 300px;
   border-radius: 12px;
   text-align: center;
 }
