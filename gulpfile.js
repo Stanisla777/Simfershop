@@ -98,7 +98,7 @@ gulp.task('build-all', function () {
 
 //Автопрефиксы
 gulp.task('autoprefixer', function () {
-    gulp.src('./src/app/css/media.css')//выборка файлов по конкретному пути
+    gulp.src('./src/app/css/style2.css')//выборка файлов по конкретному пути
 
     //даем префиксы стилям
         .pipe(autoprefixer({

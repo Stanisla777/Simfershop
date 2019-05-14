@@ -186,10 +186,10 @@
                         <div class="mn-wrapper-video">
                             <div style="background-image: url('img2/KonfZal.png');" class="mn-video">
                                 <div style="" class="mn-video__img"></div>
-                                <iframe src="https://www.youtube.com/embed/AhPbO5zuCzY?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=1&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsimfer.info&amp;widgetid=1"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen=""></iframe>
+                                <!--<iframe src="https://www.youtube.com/embed/AhPbO5zuCzY?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=1&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsimfer.info&amp;widgetid=1"-->
+                                        <!--frameborder="0"-->
+                                        <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+                                        <!--allowfullscreen=""></iframe>-->
                             </div>
 
                         </div>
@@ -298,15 +298,21 @@
         //    Симфер представляет
 
             $(".mn-video").on("click", function () {
-                $(this).find('iframe').css('display','block')
+                $(this).append("<iframe src=\"https://www.youtube.com/embed/AhPbO5zuCzY?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=1&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsimfer.info&amp;widgetid=1\"\n" +
+                    "frameborder=\"0\"\n" +
+                    "allow=\"accelerometer;autoplay;encrypted-media; gyroscope; picture-in-picture\"\n" +
+                    "allowfullscreen=\"\"></iframe>")
+
             });
 
             if ($(window).width() <= 530) {
-                $(".mn-video iframe").replaceWith("<iframe src=\"https://www.youtube.com/embed/AhPbO5zuCzY?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=1&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsimfer.info&amp;widgetid=1\"\n" +
+                $(".mn-video").append("<iframe src=\"https://www.youtube.com/embed/AhPbO5zuCzY?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=1&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsimfer.info&amp;widgetid=1\"\n" +
                     "                                        frameborder=\"0\"\n" +
                     "                                        allow=\"accelerometer;encrypted-media; gyroscope; picture-in-picture\"\n" +
                     "                                        allowfullscreen=\"\"></iframe>");
             }
+
+
 
 
             if ($(window).width()>=810){
