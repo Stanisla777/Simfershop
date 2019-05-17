@@ -571,16 +571,21 @@ button:focus {
   padding: 0 67px;
 }
 .mn-advantages__icon {
-  margin: 83px auto 0;
-  width: 80px;
-  height: 80px;
+  margin: 80px auto 0;
+  width: 55%;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
+.mn-advantages__icon:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
 .mn-advantages__description {
   text-align: center;
-  margin-top: 38px;
+  margin-top: 20px;
 }
 .mn-advantages__description p {
   font-size: 20px;
