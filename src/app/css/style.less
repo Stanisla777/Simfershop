@@ -1150,6 +1150,71 @@ button:focus{
   }
 }
 
+/*----------------------Сервисные центры-------------------------*/
+
+.sc-wrapper-service{
+  display: flex;
+  margin-top: 40px;
+}
+.sc-service{
+  &:not(:last-child){
+    margin-right: 5px;
+  }
+  width: calc(33% - 5px);
+  box-shadow: 0 2px 5px 1px #c7c7c7;
+  padding: 10px 5px 5px 10px;
+  &__information{
+    display: flex;
+    align-items: center;
+  }
+  &__map{
+    margin-right: 10px;
+    width: 30%;
+    min-width: 110px;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    p{
+      font-size: 12px;
+    }
+  }
+  &__description{
+    p{
+      &:not(.sc-service__town){
+        margin-bottom: 5px;
+      }
+      font-size: 15px;
+    }
+  }
+  &__town{
+    //font-size: px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  &__name{
+    text-shadow: 0 0 0.4px #000;
+  }
+  &__icon{
+    display: flex;
+  }
+  &__icon-item{
+    width: 31px;
+    height: 31px;
+    border: 1px solid;
+    cursor: pointer;
+    margin-top: 10px;
+    &:not(:last-child){
+      margin-right: 5px;
+    }
+  }
+}
 
 
 

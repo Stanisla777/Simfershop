@@ -1035,4 +1035,65 @@ button:focus {
   display: block;
   padding-top: 95%;
 }
+/*----------------------Сервисные центры-------------------------*/
+.sc-wrapper-service {
+  display: flex;
+  margin-top: 40px;
+}
+.sc-service {
+  width: calc(33% - 5px);
+  box-shadow: 0 2px 5px 1px #c7c7c7;
+  padding: 10px 5px 5px 10px;
+}
+.sc-service:not(:last-child) {
+  margin-right: 5px;
+}
+.sc-service__information {
+  display: flex;
+  align-items: center;
+}
+.sc-service__map {
+  margin-right: 10px;
+  width: 30%;
+  min-width: 110px;
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.sc-service__map p {
+  font-size: 12px;
+}
+.sc-service__description p {
+  font-size: 15px;
+}
+.sc-service__description p:not(.sc-service__town) {
+  margin-bottom: 5px;
+}
+.sc-service__town {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.sc-service__name {
+  text-shadow: 0 0 0.4px #000;
+}
+.sc-service__icon {
+  display: flex;
+}
+.sc-service__icon-item {
+  width: 31px;
+  height: 31px;
+  border: 1px solid;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.sc-service__icon-item:not(:last-child) {
+  margin-right: 5px;
+}
 /*------------------------------*/
