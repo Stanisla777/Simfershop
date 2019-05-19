@@ -1151,30 +1151,288 @@ button:focus{
 }
 
 /*----------------------Сервисные центры-------------------------*/
+ /*Модальное окно*/
+/*Модальное окно*/
+.parent {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*display: flex;*/
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  z-index: 1100;
+  display: none;
+}
+
+.parent #block {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  border: 1px solid #7b7a7a;
+  background: #fff;
+  box-shadow: 0 0 4px 0 #7b7a7a;
+}
+img {
+  display: block;
+  border: none;
+}
+
+#lean_overlay {
+  position: fixed;
+  z-index:1000;
+  top: 0;
+  left: 0;
+  height:100%;
+  width:100%;
+  background: rgba(0, 0, 0, 0.25);
+  display: none;
+}
+.close-menu{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: -10px;
+  top: -10px;
+  font-size: 20px;
+  //color: #412ed8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img3/IconClose.png");
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+
+/*Блок поиск городов - написать в центральный сервис*/
+
+.sc-container-search-town{
+  margin-top: 30px;
+  padding: 50px 0;
+  box-shadow: 0 0 9px 3px rgba(254, 73, 70, 0.2);
+  &:focus-within{
+    box-shadow: 0 0 9px 3px rgba(254, 73, 70, 0.28);
+  }
+}
+.sc-wrapper-search-town{
+  width: 80%;
+  margin: 0 auto;
+}
+.sc-searh-form{
+  height: 45px;
+  width: 100%;
+  //margin: 0 auto;
+  &__wrap{
+    padding-left: 20px;
+    display: flex;
+    height: 100%;
+    border: 1px solid #979292;
+    border-radius: 6px;
+    &:hover, &:focus, &:focus-within{
+      box-shadow: 0 0 7px 1px #ded2d2;
+    }
+    input{
+      border-radius: 6px;
+      width: calc(100% - 30px);
+      /*padding-left: 15px;*/
+      margin-left: 15px;
+      font-size: 18px;
+      color: #888888;
+      border: none;
+      outline: none;
+      &.input-hover{
+        box-shadow: 0 0 7px 1px #ded2d2;
+      }
+
+    }
+  }
+  &__icon{
+    height: 100%;
+    width: 30px;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-image: url("../img3/IconSearch.png");
+  }
+}
+
+.sc-searh-input{
+  display: flex;
+}
+.sc-activate-write-center-active{
+  &:before{
+    content:"-";
+  }
+}
+.sc-activate-write-center-not{
+  &:before{
+    content:"+";
+  }
+}
+.sc-activate-write-center{
+  width: max-content;
+  margin-top: 15px;
+  cursor: pointer;
+  &:before{
+    margin-right: 8px;
+    text-shadow: 0 0 1px #000;
+
+  }
+  &:after{
+    content: "";
+    display: block;
+    width: 94%;
+    height: 1px;
+    border-bottom: 1px dashed;
+    margin-left: 20px;
+
+  }
+}
+
+/*Форма написать в центр*/
+
+.sc-write-center-form{
+  margin-top: 20px;
+  display: none;
+  button{
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    width: 40%;
+    min-width: 280px;
+    height: 40px;
+    color: #fff;
+    outline: none;
+    background: #008d55;
+    background: -moz-linear-gradient(-45deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+    background: -webkit-linear-gradient(-45deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+    background: linear-gradient(135deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008d55', endColorstr='#63b84f', GradientType=1);
+    margin-top: 20px;
+    &:hover {
+      background: #63b84f;
+      background: -moz-linear-gradient(-45deg, #63b84f 0%, #008d55 69%);
+      background: -webkit-linear-gradient(-45deg, #63b84f 0%, #008d55 69%);
+      background: linear-gradient(135deg, #63b84f 0%, #008d55 69%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b84f', endColorstr='#008d55', GradientType=1);
+
+    }
+  }
+  input{
+    display: block;
+    border-radius: 6px;
+    width: 40%;
+    height: 35px;
+    padding-left: 15px;
+    //margin-left: 15px;
+    font-size: 15px;
+    color: #888888;
+    border: 1px solid #888888;
+    outline: none;
+    font-family: 'OpenSans', sans-serif;
+    &:hover, &:focus{
+      box-shadow: 0 0 3px 1px #ded2d2;
+    }
+    &:not(:last-child){
+      margin-bottom: 5px;
+    }
+    &.input-hover{
+      box-shadow: 0 0 7px 1px #ded2d2;
+    }
+
+    &:-moz-placeholder { color: #888888;}
+    &::-webkit-input-placeholder { color: #888888;}
+  }
+
+
+}
+
+.write-center-textarea{
+  width: 40%;
+  height: 100px;
+  border: 1px solid #888888;
+  border-radius: 6px;
+  padding: 10px 15px;
+  &:hover,&:focus-within{
+    box-shadow: 0 0 3px 1px #ded2d2;
+  }
+  textarea{
+    display: block;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    font-family: 'OpenSans', sans-serif;
+    //padding-left: 15px;
+    //margin-left: 15px;
+    height: 100%;
+    font-size: 15px;
+    color: #888888;
+    resize: none;
+    outline: none;
+
+  }
+}
+
+/**/
 
 .sc-wrapper-service{
-  display: flex;
   margin-top: 40px;
 }
+@margin_ser:5px;
+.sc-wrapper-service .row-3-column{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -@margin_ser;
+  margin-right:-@margin_ser;
+}
+
+.sc-wrapper-service .row-3-column__col {
+  position: relative;
+  width: calc(100%/3 - @margin_ser*2);
+  margin-left: @margin_ser;
+  margin-right: @margin_ser;
+  margin-bottom: @margin_ser*2;
+}
+
+
 .sc-service{
-  &:not(:last-child){
-    margin-right: 5px;
-  }
-  width: calc(33% - 5px);
   box-shadow: 0 2px 5px 1px #c7c7c7;
   padding: 10px 5px 5px 10px;
+
   &__information{
     display: flex;
     align-items: center;
+    height: 100%;
   }
+  &:nth-child(4n+1) .sc-service__map{
+    background-image: url('../img3/ScMap2.jpg')
+  }
+  &:nth-child(4n+2) .sc-service__map{
+    background-image: url('../img3/ScMap1.jpg')
+  }
+  &:nth-child(4n+3) .sc-service__map{
+    background-image: url('../img3/ScMap3.jpg')
+  }
+  &:nth-child(4n+4) .sc-service__map{
+    background-image: url('../img3/ScMa4.jpg')
+  }
+
   &__map{
     margin-right: 10px;
     width: 30%;
     min-width: 110px;
-    height: 120px;
+    height: 110px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -1185,33 +1443,65 @@ button:focus{
     }
   }
   &__description{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     p{
       &:not(.sc-service__town){
         margin-bottom: 5px;
       }
-      font-size: 15px;
+      font-size: 13px;
+      padding: 0;
     }
   }
   &__town{
     //font-size: px;
     text-transform: uppercase;
     font-weight: 500;
+    text-shadow: 0 1px 0.1px #000;
+    letter-spacing: 0.7px;
     margin-bottom: 10px;
   }
   &__name{
-    text-shadow: 0 0 0.4px #000;
+    text-shadow: 0 1px 0.2px #000;
+  }
+  &__adress,&__telephone{
+    text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.74);
   }
   &__icon{
     display: flex;
+    margin-top: auto;
   }
   &__icon-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 31px;
     height: 31px;
-    border: 1px solid;
     cursor: pointer;
     margin-top: 10px;
+    background-color: #0c9be4;
+
     &:not(:last-child){
       margin-right: 5px;
+    }
+    div{
+      width: 20px;
+      height: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &__icon-tel{
+    div{
+      background-image: url("../img3/IconTelefHotel.png");
+    }
+
+  }
+  &__icon-map{
+    div{
+      background-image: url("../img3/IconMapHotel.png");
     }
   }
 }
