@@ -5,6 +5,18 @@
     .book-progress__item:not(.book-progress__item-cover) {
         padding: 60px 10px 50px;
     }
+
+    .mn-category__item-medium h3 {
+        font-size: 18px;
+    }
+    .mn-category-item-small h3 {
+        font-size: 14px;
+    }
+    .mn-category__body {
+        padding-top: 13px;
+    }
+
+
 }
 @media screen and (max-width: 1270px){
     .mn-section-advantages .row-3-column {
@@ -38,15 +50,15 @@
         width: calc(100%/3 - 15px*2);
         margin-bottom: 30px;
     }
-    .mn-category__item-medium h3 {
-        font-size: 18px;
-    }
-    .mn-category-item-small h3 {
-        font-size: 14px;
-    }
-    .mn-category__body {
-        padding-top: 13px;
-    }
+    /*.mn-category__item-medium h3 {*/
+        /*font-size: 18px;*/
+    /*}*/
+    /*.mn-category-item-small h3 {*/
+        /*font-size: 14px;*/
+    /*}*/
+    /*.mn-category__body {*/
+        /*padding-top: 13px;*/
+    /*}*/
 }
 
 
@@ -95,6 +107,18 @@
     }
 
 
+    .mn-category:not(.mn-category-item-small) .mn-category__body:not(.mn-category__body-big) h3 {
+        font-size: 16px;
+        padding: 6px 6px;
+    }
+    .mn-category-item-small h3 {
+        font-size: 14px;
+    }
+    .mn-category__body {
+        padding-top: 13px;
+    }
+
+
 
 }
 
@@ -124,6 +148,10 @@
     }
     .mn-section-category .row-6-column__col {
         width: calc(100%/2 - 15px*2);
+    }
+    .mn-category:not(.mn-category-item-small) .mn-category__body h3{
+        margin: 10px auto;
+        padding: 6px 20px;
     }
 }
 @media screen and (max-width: 710px){
