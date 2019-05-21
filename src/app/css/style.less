@@ -829,12 +829,6 @@ button:focus{
   margin-top: 40px;
 }
 
-.mn-progress{
-  height: 400px;
-  border: 1px solid;
-  background: url("../img2/progress.jpg")center no-repeat;
-  background-size: contain;
-}
 
 .wowbook-handle.wowbook-left, .wowbook-handle.wowbook-right {
   width: 30% !important;
@@ -862,54 +856,12 @@ button:focus{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img2/Stol2.jpg");
+  background-image: url("../img4/wood (1).jpg");
   #book-progress{
     width: 60%!important;
     height:70%!important;
     margin: 0 auto;/*Добавил*/
   }
-}
-.mn-wrapper-progress__owl{/*Добавил*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img2/Stol2.jpg");
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.mn-wrapper-progress__owl .owl-carousel{/*Добавил*/
-  width: 50%;
-  min-width: 280px;
-  margin: 0 auto;
-}
-.mn-wrapper-progress__owl .owl-nav{
-  width: max-content;
-  display: flex;
-  margin:  20px auto 0;
-  button{
-    outline: none;
-    border: none;
-    display: block;
-    width: 35px;
-    height: 35px;
-    background-position: center!important;
-    background-repeat: no-repeat!important;
-    background-size: contain!important;
-  }
-  .owl-prev{
-    background-image: url('../img2/ProgressArrowLeft3.png')!important;
-    margin-right: 14px;
-    margin-top: 1px;
-  }
-  .owl-next{
-    background-image: url('../img2/ProgressArrowRight3.png')!important;
-  }
-
-
-
-
-
-
 }
 
 .book-progress{
@@ -974,17 +926,18 @@ button:focus{
 
 .book-progress-control{
   display: flex;
+  align-items: center;
   margin: 0 auto;
   list-style: none;
   padding: 0;
   &__back{
-    background-image: url('../img2/стрелкат.png');
+    background-image: url('../img4/стрелка.png');
   }
   &__next{
-    background-image: url('../img2/стрелкат-2.png');
+    background-image: url('../img4/стрелка-2.png');
   }
   &__first{
-    background-image: url('../img2/кругт.png');
+    background-image: url('../img4/круг.png');
     margin: 0 10px;
     border-radius: 50%;
     box-shadow: 0 0 3px 1px #000;
@@ -995,13 +948,68 @@ button:focus{
       height: 100%;
       cursor: pointer;
     }
+    &:not(.book-progress-control__first){
+      width: 60px;
+      height: 28px;
+    }
+    &.book-progress-control__first{
+      width: 40px;
+      height: 40px;
+    }
     width: 35px;
     height: 35px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
 }
+
+/*медиа owl карусель*/
+.mn-wrapper-progress__owl{/*Добавил*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img2/Stol2.jpg");
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.mn-wrapper-progress__owl .owl-carousel{/*Добавил*/
+  width: 50%;
+  min-width: 280px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.mn-wrapper-progress__owl .owl-nav{
+  width: max-content;
+  display: flex;
+  margin:  20px auto 0;
+  button{
+    outline: none;
+    border: none;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-size: contain!important;
+  }
+  .owl-prev{
+    background-image: url('../img2/ProgressArrowLeft3.png')!important;
+    margin-right: 14px;
+    margin-top: 1px;
+  }
+  .owl-next{
+    background-image: url('../img2/ProgressArrowRight3.png')!important;
+  }
+
+
+
+
+
+
+}
+
+
 
 /*Секция видео*/
 .mn-section-video{
