@@ -874,13 +874,13 @@ button:focus {
   padding: 0;
 }
 .book-progress-control__back {
-  background-image: url('../img2/ProgressArrowLeft3.png');
+  background-image: url('../img2/стрелкат.png');
 }
 .book-progress-control__next {
-  background-image: url('../img2/ProgressArrowRight3.png');
+  background-image: url('../img2/стрелкат-2.png');
 }
 .book-progress-control__first {
-  background-image: url('../img2/ProgressArrowHome3.png');
+  background-image: url('../img2/кругт.png');
   margin: 0 10px;
   border-radius: 50%;
   box-shadow: 0 0 3px 1px #000;
