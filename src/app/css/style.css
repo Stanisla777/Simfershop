@@ -1172,7 +1172,7 @@ img {
 }
 .sc-activate-write-center {
   width: max-content;
-  margin-top: 15px;
+  padding-top: 15px;
   cursor: pointer;
 }
 .sc-activate-write-center:before {
@@ -1190,6 +1190,8 @@ img {
 /*Форма написать в центр*/
 .sc-write-center-form {
   margin-top: 20px;
+  width: 40%;
+  min-width: 280px;
   display: none;
 }
 .sc-write-center-form button {
@@ -1198,8 +1200,7 @@ img {
   font-size: 16px;
   border: none;
   border-radius: 7px;
-  width: 40%;
-  min-width: 280px;
+  width: 100%;
   height: 40px;
   color: #fff;
   outline: none;
@@ -1220,7 +1221,7 @@ img {
 .sc-write-center-form input {
   display: block;
   border-radius: 6px;
-  width: 40%;
+  width: 100%;
   height: 35px;
   padding-left: 15px;
   font-size: 15px;
@@ -1246,7 +1247,7 @@ img {
   color: #888888;
 }
 .write-center-textarea {
-  width: 40%;
+  width: 100%;
   height: 100px;
   border: 1px solid #888888;
   border-radius: 6px;

@@ -289,6 +289,39 @@
 
 
 
+/*Медиа сервисы*/
+@media screen and (max-width: 1035px){
+    .sc-wrapper-service .row-3-column__col {
+        width: calc(100%/2 - 5px*2);
+    }
+}
+
+@media screen and (max-width: 740px){
+    .sc-wrapper-service .row-3-column__col {
+        width: calc(100%/1 - 5px*2);
+    }
+}
+@media screen and (max-width: 500px){
+    .sc-wrapper-search-town {
+        width: 95%;
+    }
+    .sc-write-center-form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .sc-service__map{
+        display: none;
+    }
+    .sc-service__description, .sc-service__icon{
+        margin: 0 auto;
+    }
+    .sc-service__description{
+        text-align: center;
+    }
+}
+
 
 
 
