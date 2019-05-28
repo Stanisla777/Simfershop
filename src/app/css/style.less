@@ -2180,13 +2180,90 @@ img {
   color: #000!important;
 }
 
+/*переход на другие страницы*/
 
+.mn-transition-to-page{
+  margin-top: 40px;
+}
 
+.wrapper-transition-to-page{
 
+}
+@margin3:15px;
+.mn-transition-to-page .row-4-col{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -@margin3;
+  margin-right:-@margin3;
+}
 
+.mn-transition-to-page .row-4-col__col {
+  position: relative;
+  width: calc(100%/4 - @margin3*2);
+  margin-left: @margin3;
+  margin-right: @margin3;
+}
+.transition-to-page{
+  position: relative;
+  border-radius: 10px;
+  display: block;
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
 
+  &__body{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    &:hover .transition-to-page__img{
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+    }
 
+  }
 
+  &__img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    will-change: transform;
+
+    }
+  &__title{
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+    text-transform: uppercase;
+    bottom: 23px;
+    left: 18px;
+  }
+  &__icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
 
 
 
