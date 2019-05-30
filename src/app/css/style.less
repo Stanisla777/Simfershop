@@ -2277,6 +2277,343 @@ img {
 
 
 
+/*-*-------------------------------------------------*/
+
+/*Страница рецепты*/
+
+.rec-section-search-dish{
+  margin-top: 30px;
+}
+.rec-wrapper-search-dish{
+  width: 50%;
+  margin: 0 auto;
+}
+.sc-searh-form{
+  height: 45px;
+  width: 100%;
+  //margin: 0 auto;
+  &__wrap{
+    padding-left: 20px;
+    display: flex;
+    height: 100%;
+    border: 1px solid #979292;
+    border-radius: 6px;
+    &:hover, &:focus, &:focus-within{
+      box-shadow: 0 0 7px 1px #ded2d2;
+    }
+    input{
+      border-radius: 6px;
+      width: calc(100% - 30px);
+      /*padding-left: 15px;*/
+      margin-left: 15px;
+      font-size: 18px;
+      color: #888888;
+      border: none;
+      outline: none;
+      &.input-hover{
+        box-shadow: 0 0 7px 1px #ded2d2;
+      }
+
+    }
+  }
+  &__icon{
+    height: 100%;
+    width: 30px;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-image: url("../img3/IconSearch.png");
+  }
+}
+
+.sc-searh-input{
+  display: flex;
+}
+.sc-activate-write-center-active{
+  &:before{
+    content:"-";
+  }
+}
+.sc-activate-write-center-not{
+  &:before{
+    content:"+";
+  }
+}
+.sc-activate-write-center{
+  width: max-content;
+  padding-top: 15px;
+  cursor: pointer;
+  &:before{
+    margin-right: 8px;
+    text-shadow: 0 0 1px #000;
+
+  }
+  &:after{
+    content: "";
+    display: block;
+    width: 94%;
+    height: 1px;
+    border-bottom: 1px dashed;
+    margin-left: 20px;
+
+  }
+
+}
+.rec-search-category{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  .wrapper-package{
+    &:first-child{
+      margin-right: 20px;
+    }
+    width: calc(50% - 10px);
+    border: 1px solid #979292;
+    border-radius: 6px;
+
+    input{ /*ширина поля input*/
+      width: 80%;
+      height: 50px;
+      outline: none;
+      border: none;
+      border-radius: 6px;
+      padding-left: 20px;
+    }
+  }
+
+
+
+  .triangle-down { /*стилизую треугольник в select, может быть и картинка*/
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 16px solid #000;
+    border-radius: 2px;
+  }
+  .wrapper-select{/*раскрывающийся список*/
+    /* border: 1px solid #6f6f6f; */
+    /* padding-left: 10px; */
+    display: none;
+  }
+  .wrapper-select li{/*поля списка*/
+    /* margin-bottom: 10px; */
+    color: #000;
+    cursor: pointer;
+    //background-color: aliceblue;
+    /* padding-left: 10px; */
+    padding: 10px 10px;
+
+    &:not(:last-child){
+      border-bottom: 1px solid #979797;
+    }
+    &:last-child{
+      border-radius: 6px;
+    }
+  }
+  .wrapper-select li:first-child{
+    margin-top: 10px;
+  }
+
+}
+
+/*стилизованный селект*/
+
+.wrapper-select-color{
+  background-color: #f7f7f7;
+}
+.rec-wrapper-input{
+  border-radius: 6px;
+}
+
+.rec-section-dishes{
+  margin-top: 30px;
+}
+
+@margin6:10px;
+.rec-section-dishes .row-4-col{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -@margin6;
+  margin-right:-@margin6;
+}
+
+.rec-section-dishes .row-4-col__col {
+  position: relative;
+  width: calc(100%/4 - @margin6*2);
+  margin-left: @margin6;
+  margin-right: @margin6;
+}
+
+.col-dish {
+  margin-bottom: 40px;
+
+  //border: 1px solid;
+  &__img {
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 120%;
+    }
+  }
+  &__name{
+    font-size: 18px;
+    margin-top: 7px;
+  }
+  &__time-preparing{
+    color: #8f8f8f;
+    font-size: 13px;
+    margin-top: 7px;
+    p{
+      display: flex;
+      align-items: center;
+      &:first-child{
+        margin-bottom: 3px;
+      }
+
+      &:before{
+        margin-right: 12px;
+        content: "";
+        display: block;
+        width: 17px;
+        height: 17px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+
+  }
+  &__number-servings:before{
+    background-image: url("../img5/DishIcon1.png");
+  }
+  &__time:before{
+    background-image: url("../img5/DishIcon2.svg");
+  }
+}
+
+
+/*Модальное окно*/
+/*Модальное окно*/
+.parent {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  z-index: 1100;
+  //display: none;
+}
+
+.parent .pop-up {
+  background-color: #fff;
+  position: relative;
+  width: 62%;
+  height: 80%;
+  border: 1px solid #7b7a7a;
+  //background: #fff;
+  box-shadow: 0 0 4px 0 #7b7a7a;
+}
+img {
+  display: block;
+  border: none;
+}
+
+#lean_overlay {
+  position: fixed;
+  z-index:1000;
+  top: 0;
+  left: 0;
+  height:100%;
+  width:100%;
+  background: rgba(0, 0, 0, 0.25);
+  display: none;
+}
+.close-menu{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: -10px;
+  top: -10px;
+  font-size: 20px;
+  //color: #412ed8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img3/IconClose.png");
+  cursor: pointer;
+  z-index: 10;
+}
+
+.pop-up{
+  &__header{
+    text-align: center;
+    background-color: #eef0f1;
+    padding: 30px 0;
+  }
+  &__category{
+    text-transform: uppercase;
+    color: #676767;
+    font-size: 15px;
+  }
+  &__dish-name{
+    font-size: 21px;
+    color: #000;
+    margin-top: 10px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
