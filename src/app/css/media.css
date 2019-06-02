@@ -333,7 +333,16 @@
 }
 
 
-
+@media print {
+    /* здесь будут стили для печати */
+    .list-ingredients__item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #a7a2a2;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+}
 
 
 
