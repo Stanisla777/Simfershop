@@ -314,7 +314,7 @@
     .transition-to-page:before {
         content: "";
         display: block;
-        padding-top: 50px;
+        padding-top: 30px;
     }
     .transition-to-page__icon{
         display: none;

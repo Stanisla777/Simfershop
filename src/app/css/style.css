@@ -2270,10 +2270,14 @@ div[id*="ascrail"] {
   /*щирина линии скролла*/
   border-top-right-radius: 5px!important;
   border-bottom-right-radius: 5px!important;
+  width: 12px!important;
+}
+#ascrail2000 {
+  width: 13px!important;
 }
 div[id*="ascrail"] div {
   /*ползунок*/
-  right: 0.8px;
+  right: 1.5px;
   /*сдвиг ползунка*/
 }
 .parent-ab {
@@ -2495,5 +2499,26 @@ img {
 }
 .pop-up__sending button:hover {
   box-shadow: 0 0 4px 0.1px #c5c0c0;
+}
+.noscroll {
+  position: fixed;
+  overflow-y: scroll;
+  transform: translate(-50%, 0);
+  left: 50%;
+  width: 100%;
+}
+.fff {
+  float: right;
+  width: 10px;
+  height: 10px;
+}
+.ccc {
+  width: 10px;
+  height: 10px;
+}
+.container-recep:after {
+  content: "";
+  display: block;
+  margin-right: 10px;
 }
 /*------------------------------*/

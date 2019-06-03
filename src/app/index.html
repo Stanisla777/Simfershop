@@ -17,8 +17,10 @@
 </head>
 <body>
 
-<div class="container-recep">
 
+
+<div class="container-recep">
+    <div class="fff "></div>
 
     <div class="parent-ab">
         <div class="pop-up-ab">
@@ -125,6 +127,7 @@
     <div id="lean_overlay"></div>
 
     <div class="wrap">
+
 
         <div class="container">
 
@@ -349,18 +352,29 @@
             $('.parent-ab').css('display', 'block').addClass('parent-ab__active');
             $('#lean_overlay').show();//фон затемнение
             $("body").css("overflow-y", "hidden");
+
+            // $('body').css('top', -(document.documentElement.scrollTop) + 'px')
+            //     .addClass('noscroll');
+
+            $('.fff').addClass('ccc');
+
             //подставляю картинку
             $('.parent-ab .pop-up__main-img').css('background-image','url('+attr_img+')');
             //подставляю название блюда
             $('.parent-ab .pop-up__dish-name').text(name_dish);
             scroll(); //вызываю функцию красивого скролла
+            // $('body').addClass('noscroll');
         });
 
         $('.close-menu').on('click', function () {//Закрываю модальное окно по клику на крестик
             $('.parent-ab').css('display', 'none').removeClass('parent-ab__active');
             $(".pop-up-ab").getNiceScroll().hide();
             $('#lean_overlay').hide();
+
+
             $("body").css("overflow-y", "auto");
+
+            // $('body').removeClass('noscroll');
         });
 
 
@@ -369,6 +383,7 @@
             $('.parent-ab').css('display', 'none');
             $(this).hide();
             $("body").css("overflow-y", "auto");
+            // $('body').removeClass('noscroll');
             $('#lean_overlay').hide();
         });
 
@@ -387,10 +402,17 @@
                 autohidemode: false,
                 cursorwidth: 10,  //ширина ползунка
                 cursorborderradius: 4, //радиус ползунка
-                background: "#a4a4a4", //цвет линии сролла
+                background: "#a4a4a4" //цвет линии сролла
 
             });
         }
+
+
+        function no_scroll(){
+            $('body').css('top', -(document.documentElement.scrollTop) + 'px')
+                .addClass('noscroll');
+        }
+
 
     })
 

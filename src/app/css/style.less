@@ -2585,10 +2585,16 @@ div[id*="ascrail"]{  /*щирина линии скролла*/
 
   border-top-right-radius: 5px!important;
   border-bottom-right-radius: 5px!important;
+  width: 12px!important;
 }
-div[id*="ascrail"] div{ /*ползунок*/
-  right: 0.8px; /*сдвиг ползунка*/
 
+#ascrail2000{
+  width: 13px!important;
+}
+div[id*="ascrail"] div {
+  /*ползунок*/
+  right: 1.5px;
+  /*сдвиг ползунка*/
 }
 
 .parent-ab {
@@ -2840,11 +2846,31 @@ img {
 
 
 
+.noscroll {
+  position: fixed;
+  overflow-y:scroll;
+  transform: translate(-50%,0);
+  left: 50%;
+  width: 100%;
+}
+.fff{
+  float: right;
+  width: 10px;
+  height: 10px;
 
+}
+.ccc{
+  width: 10px;
+  height: 10px;
+}
 
-
-
-
+.container-recep{
+  &:after{
+    content: "";
+    display: block;
+    margin-right: 10px;
+  }
+}
 
 
 
