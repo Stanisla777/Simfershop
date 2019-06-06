@@ -45,8 +45,122 @@
                 </div>
 
             </div>
-            <div class="ins-why-we">
+            <div class="ins-section-advantage">
+                <h2 class="h2-title__black">Почему стоит обратиться именно к нам</h2>
+                <div class="ins-wrapper-advantage row-3-col">
+                    <div class="row-3-col__col ins-advantage-item">
+                        <div class="ins-advantage-item__wrap-img">
+                            <div style="background-image: url('img6/IconSpecialist1.png')" class="ins-advantage-item__img"></div>
+                        </div>
 
+                        <h3>Лучшие специалисты</h3>
+                        <p>Все мастера русские, с опытом работы от 2х лет, без вредных привычек</p>
+                    </div>
+                    <div class="row-3-col__col ins-advantage-item">
+                        <div class="ins-advantage-item__wrap-img">
+                            <div style="background-image: url('img6/IconSpecialist2.png')" class="ins-advantage-item__img"></div>
+                        </div>
+
+                        <h3>Ремонт в день обращения</h3>
+                        <p>Работаем без перерывов и выходных</p>
+                    </div>
+
+                    <div class="row-3-col__col ins-advantage-item">
+                        <div class="ins-advantage-item__wrap-img">
+                            <div style="background-image: url('img6/IconSpecialist3.png')" class="ins-advantage-item__img"></div>
+                        </div>
+
+                        <h3>Качество и оперативность</h3>
+                        <p>90% работ выполняется нашими специалистами в течении ОДНОГО часа</p>
+                    </div>
+
+                    <div class="row-3-col__col ins-advantage-item">
+                        <div class="ins-advantage-item__wrap-img">
+                            <div style="background-image: url('img6/IconSpecialist4.png')" class="ins-advantage-item__img"></div>
+                        </div>
+
+                        <h3>Чистота и порядок</h3>
+                        <p>После себя мастера не оставят следов от проведенного ремонта</p>
+                    </div>
+
+                    <div class="row-3-col__col ins-advantage-item">
+                        <div class="ins-advantage-item__wrap-img">
+                            <div style="background-image: url('img6/IconSpecialist5.png')" class="ins-advantage-item__img"></div>
+                        </div>
+
+                        <h3>Выезд мастера на дом</h3>
+                        <p>Мастер приедет в любое удобное для Вас время</p>
+                    </div>
+
+                    <div class="row-3-col__col ins-advantage-item">
+                        <div class="ins-advantage-item__wrap-img">
+                            <div style="background-image: url('img6/IconSpecialist6.png')" class="ins-advantage-item__img"></div>
+                        </div>
+
+                        <h3>Гарантия</h3>
+                        <p>1 месяц гарантии на все выполненные работы</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="ins-category-work">
+                <div class="ins-wrapper-category row-3-col">
+                    <div class="row-3-col__col ins-category-item">
+                        <div style="background-image: url('img6/Podkluchenie1.jpg')" class="ins-category-item__img">
+                            <p class="ins-category-item__can">Сможем!</p>
+                        </div>
+                        <div class="ins-category-item__description">
+                            <p>Подключение стиральных машин</p>
+                        </div>
+                    </div>
+
+                    <div class="row-3-col__col ins-category-item">
+                        <div style="background-image: url('img6/Podkluchenie2.jpg')" class="ins-category-item__img">
+                            <p class="ins-category-item__can">Сможем!</p>
+                        </div>
+                        <div class="ins-category-item__description">
+                            <p>Подключение посудомоечных машин</p>
+                        </div>
+                    </div>
+
+                    <div class="row-3-col__col ins-category-item">
+                        <div style="background-image: url('img6/Podkluchenie3.jpg')" class="ins-category-item__img">
+                            <p class="ins-category-item__can">Сможем!</p>
+                        </div>
+                        <div class="ins-category-item__description">
+                            <p>Подключение плиты</p>
+                        </div>
+                    </div>
+
+                    <div class="row-3-col__col ins-category-item">
+                        <div style="background-image: url('img6/Podkluchenie4.jpg')" class="ins-category-item__img">
+                            <p class="ins-category-item__can">Сможем!</p>
+                        </div>
+                        <div class="ins-category-item__description">
+                            <p>Подключение варочной поверхности</p>
+                        </div>
+                    </div>
+
+                    <div class="row-3-col__col ins-category-item">
+                        <div style="background-image: url('img6/Podkluchenie5.jpg')" class="ins-category-item__img">
+                            <p class="ins-category-item__can">Сможем!</p>
+                        </div>
+                        <div class="ins-category-item__description">
+                            <p>Подключение духового шкафа</p>
+                        </div>
+                    </div>
+
+                    <div class="row-3-col__col ins-category-item">
+                        <div style="background-image: url('img6/Podkluchenie6.jpg')" class="ins-category-item__img">
+                            <p class="ins-category-item__can">Сможем!</p>
+                        </div>
+                        <div class="ins-category-item__description">
+                            <p>Установка вытяжки</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
 
@@ -60,8 +174,39 @@
 <script>
     $(document).ready(function () {
         result = $('.difficult-process-description').offset();
-        console.log(result.left);
-        $('.difficult-process-worker').offset({top:result.top - 154,left:result.left - 130})
+        $('.difficult-process-worker').offset({top:result.top - 154,left:result.left - 130});
+
+        //Анимашка Сможем
+
+
+
+            // $('.wrapper-about-us-advantage').each(function () {
+            //     var self = $(this);
+            //     height = self.offset().top + self.height();
+            //     if ($(document).scrollTop() + windowHeight >= height) {
+            //         $(self).addClass('zoomIn');//просто подключаю класс с анимашкой
+            //     }
+            // });
+            //
+            //
+            // $('.ins-category-item').each(function () {
+            //     var self = $(this);
+            //     height = self.offset().top + self.height();
+            //     if ($(document).scrollTop() + windowHeight >= height) {
+            //         $(self).addClass('zoomIn');//просто подключаю класс с анимашкой
+            //     }
+            // });
+
+        $('.ins-category-item').hover(
+            function(){
+                $(this).find('.ins-category-item__can').addClass('zoomIn')
+            },
+            function(){
+                $(this).find('.ins-category-item__can').removeClass('zoomIn')
+            });
+
+
+
 
 
 
