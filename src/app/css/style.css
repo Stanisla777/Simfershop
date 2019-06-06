@@ -2521,4 +2521,55 @@ img {
   display: block;
   margin-right: 10px;
 }
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*Новая страница инсталяция*/
+.difficult-process-bacgrond {
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.difficult-process-bacgrond:before {
+  content: "";
+  display: block;
+  padding-top: 29%;
+}
+.difficult-process-description {
+  position: relative;
+  width: 84%;
+  padding: 25px;
+  margin-left: 120px;
+  margin-top: 30px;
+  box-shadow: 0 0 9px 0px #868383;
+}
+.difficult-process-description p {
+  font-size: 19px;
+  line-height: 33px;
+}
+.wrapper-difficult-process {
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+}
+.difficult-process-worker {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  min-width: 197px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img6/Remontnik2.png);
+}
+.difficult-process-worker:before {
+  content: "";
+  display: block;
+  padding-top: 140%;
+}
+.ins-why-we {
+  margin-top: 30px;
+}
 /*------------------------------*/
