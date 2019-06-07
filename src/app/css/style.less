@@ -3078,6 +3078,294 @@ img {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
 }
+/*Прайс лист*/
+.ins-section-price-list{
+  margin-top: 40px;
+}
+.ins-choose-category{
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 18px;
+}
+.ins-price-list-table{
+
+}
+.ins-price-list-table{
+  border: 1px solid #aaaaaa;
+  margin-top: 10px;
+  &__thead{
+    background-color: #f8f6ec;
+    font-weight: 500;
+  }
+  &__tr{
+    display: flex;
+    padding: 16px 20px;
+    &:not(:last-child){
+      border-bottom: 1px solid #a9a9a9;
+    }
+
+  }
+  &__td{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__td{
+    &:first-child{
+      width: 50%;
+    }
+    &:nth-child(2){
+      width: 20%;
+      text-align: center;
+    }
+    &:last-child{
+      width: calc(100% - 50% - 20%);
+      text-align: center;
+      display: flex;
+      align-items: flex-end;
+    }
+
+  }
+  .checkbox{
+    user-select: none;
+  }
+  &__category{
+    p{
+
+    }
+    font-weight: 500;
+  }
+}
+
+
+/*Чекбокс*/
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+.checkbox label {
+  position: relative;
+  //display: inline-block;
+
+  /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+  //padding-left: 22px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+  //position: absolute;
+  content: "";
+
+  /*Needed for the line-height to take effect*/
+  display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before{
+  height: 16px;
+  width: 16px;
+
+  border: 1px solid;
+  left: 0px;
+
+  /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+   *to vertically center it.
+   */
+  top: 3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+  position: absolute;
+  height: 8px;
+  width: 17px;
+  border-left: 2px solid #36a518;
+  border-bottom: 2px solid #36a518;
+  transform: rotate(-45deg);
+  left: 3px;
+  top: -3px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+  content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+/*Что было выбрано*/
+.ins-selected-items{
+  margin-top: 30px;
+  &__des{
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+.list-selected-items{
+  margin-top: 10px;
+  width: 50%;
+  li{
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    &:before{
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../img6/Ins-galka.png");
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+  }
+
+}
+
+
+
+/*Форма заявки*/
+
+.ins-call-master{
+  margin-top: 30px;
+  //display: flex;
+
+  input {
+    border: 1px solid #8184a1;
+    //width: calc((100% - 200px) / 3);
+    width: 30%;
+    min-width: 280px;
+    height: 40px !important;
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #000;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+
+
+  }
+  button{
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 30%;
+    height: 40px;
+    color: #fff;
+
+    background: #de264a;
+    background: -moz-linear-gradient(-45deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
+    background: -webkit-linear-gradient(-45deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
+    background: linear-gradient(135deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de264a', endColorstr='#dda6b0',GradientType=1 );
+    &:hover{
+      background: #dd5a72;
+      background: -moz-linear-gradient(-45deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
+      background: -webkit-linear-gradient(-45deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
+      background: linear-gradient(135deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd5a72', endColorstr='#de264a',GradientType=1 );
+    }
+
+
+
+  }
+  textarea{
+    width: 30%;
+    height: 100px;
+    min-width: 280px;
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    padding-top: 20px;
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #000;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 20px;
+  }
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+  input::-moz-placeholder {
+    color: #767676;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  input::-webkit-input-placeholder {
+    color: #767676;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+
+}
+
+
+.ins-call-master input::-moz-placeholder {
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ins-call-master input::-webkit-input-placeholder {
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ins-call-master textarea::-moz-placeholder {
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ins-call-master textarea::-webkit-input-placeholder {
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ins-selected-items{
+  &__total-amount{
+
+  }
+}
+.text-shadow{
+  text-shadow: 0 0 5px red;
+}
+
+
+
+
+
+
+
+
+
 
 
 
