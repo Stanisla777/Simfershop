@@ -2547,6 +2547,25 @@ img {
   font-size: 19px;
   line-height: 33px;
 }
+.difficult-process-description p a {
+  display: inline-block;
+  border-bottom: 1px dotted;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+.difficult-process-description p a:hover,
+.difficult-process-description p a:visited,
+.difficult-process-description p a:link {
+  color: #000;
+}
+.difficult-process-description p span {
+  border-bottom: 1px dotted;
+  font-weight: 600;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
 .wrapper-difficult-process {
   position: relative;
   margin-top: 100px;
@@ -2570,7 +2589,7 @@ img {
   padding-top: 140%;
 }
 .ins-section-advantage {
-  margin-top: 30px;
+  margin-top: 70px;
 }
 .ins-section-advantage .row-3-col {
   display: flex;
@@ -2593,7 +2612,7 @@ img {
   font-size: 18px;
   margin: 10px 0;
   color: #f71717;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
 }
 .ins-advantage-item p {
@@ -2659,7 +2678,7 @@ img {
 .ins-category-item__description p {
   padding: 10px 0;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   color: #0e0b0b;
 }
@@ -2669,9 +2688,12 @@ img {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 33px;
-  padding: 10px;
+  padding: 22px;
   background-color: #fff;
-  border-radius: 17px;
+  border-top-right-radius: 34px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 6px;
 }
 .ins-category-item__can {
   opacity: 0;
@@ -2700,11 +2722,11 @@ img {
 }
 /*Прайс лист*/
 .ins-section-price-list {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .ins-choose-category {
   padding: 0;
-  margin: 10px 0;
+  margin: 10px 0 20px;
   text-align: center;
   font-size: 18px;
 }
@@ -2712,9 +2734,12 @@ img {
   border: 1px solid #aaaaaa;
   margin-top: 10px;
 }
+.ins-price-list-table p {
+  padding: 0!important;
+}
 .ins-price-list-table__thead {
   background-color: #f8f6ec;
-  font-weight: 500;
+  font-weight: 600;
 }
 .ins-price-list-table__tr {
   display: flex;
@@ -2729,14 +2754,14 @@ img {
   justify-content: center;
 }
 .ins-price-list-table__td:first-child {
-  width: 50%;
+  width: 60%;
 }
 .ins-price-list-table__td:nth-child(2) {
-  width: 20%;
+  width: 30%;
   text-align: center;
 }
 .ins-price-list-table__td:last-child {
-  width: calc(100% - 50% - 20%);
+  width: calc(100% - 60% - 30%);
   text-align: center;
   display: flex;
   align-items: flex-end;
@@ -2745,7 +2770,7 @@ img {
   user-select: none;
 }
 .ins-price-list-table__category {
-  font-weight: 500;
+  font-weight: 600;
 }
 /*Чекбокс*/
 .checkbox input[type="checkbox"] {
@@ -2753,6 +2778,8 @@ img {
 }
 .checkbox label {
   position: relative;
+  display: block;
+  padding: 0!important;
   /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
 }
 .checkbox label::before,
@@ -2781,7 +2808,7 @@ img {
   border-bottom: 2px solid #36a518;
   transform: rotate(-45deg);
   left: 3px;
-  top: -3px;
+  top: -2px;
 }
 /*Hide the checkmark by default*/
 .checkbox input[type="checkbox"] + label::after {
@@ -2801,11 +2828,14 @@ img {
 }
 .ins-selected-items__des {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .list-selected-items {
   margin-top: 10px;
   width: 50%;
+  display: block;
+  list-style-type: disc;
+  padding-inline-start: 0px;
 }
 .list-selected-items li {
   font-size: 16px;
@@ -2825,12 +2855,55 @@ img {
   flex-shrink: 0;
 }
 /*Форма заявки*/
+.ins-wrapper-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.ins-arrow {
+  width: 13%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img6/FormArrow4.png");
+}
+.ins-arrow:before {
+  content: "";
+  display: block;
+  padding-top: 72%;
+}
+.ins-call-us {
+  width: 40%;
+}
+.ins-call-us__description {
+  font-size: 25px;
+  padding: 0!important;
+  line-height: 33px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.ins-call-us__description a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+.ins-call-us__description a:hover,
+.ins-call-us__description a:visited,
+.ins-call-us__description a:link {
+  color: #000;
+}
+.ins-call-us__description-2 {
+  font-size: 20px;
+  margin-top: 15px;
+}
 .ins-call-master {
-  margin-top: 30px;
+  width: 25%;
 }
 .ins-call-master input {
   border: 1px solid #8184a1;
-  width: 30%;
+  width: 100%;
   min-width: 280px;
   height: 40px !important;
   position: relative;
@@ -2853,7 +2926,7 @@ img {
   font-size: 16px;
   border: none;
   border-radius: 4px;
-  width: 30%;
+  width: 100%;
   height: 40px;
   color: #fff;
   background: #de264a;
@@ -2870,7 +2943,7 @@ img {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dd5a72', endColorstr='#de264a', GradientType=1);
 }
 .ins-call-master textarea {
-  width: 30%;
+  width: 100%;
   height: 100px;
   min-width: 280px;
   position: relative;
@@ -2922,7 +2995,56 @@ img {
   font-size: 16px;
   font-weight: 500;
 }
+.ins-selected-items__total-amount {
+  font-weight: 400;
+}
 .text-shadow {
-  text-shadow: 0 0 5px red;
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+}
+.text-shadow:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: calc(100% / 2 - 6px);
+  height: 1px;
+  border-bottom: 1px dotted;
+}
+.ins-adress input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid;
+  padding-left: 15px;
+  outline: none;
+  font-size: 18px;
+}
+.ins-adress input::-moz-placeholder {
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ins-adress input::-webkit-input-placeholder {
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ins-calculate-distance button {
+  cursor: pointer;
+  color: #fff;
+  width: 140px;
+  height: 40px;
+  border-radius: 4px;
+  background: #de264a;
+  background: -moz-linear-gradient(-45deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
+  background: -webkit-linear-gradient(-45deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
+  background: linear-gradient(135deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#de264a', endColorstr='#dda6b0', GradientType=1);
+}
+.ins-price-list-table__adress {
+  font-weight: 500;
+}
+#from {
+  display: none;
 }
 /*------------------------------*/
