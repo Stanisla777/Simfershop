@@ -2775,6 +2775,7 @@ img {
 /*Чекбокс*/
 .checkbox input[type="checkbox"] {
   opacity: 0;
+  position: absolute;
 }
 .checkbox label {
   position: relative;
