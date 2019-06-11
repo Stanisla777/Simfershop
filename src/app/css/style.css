@@ -2560,7 +2560,8 @@ img {
 .difficult-process-description p a:link {
   color: #000;
 }
-.difficult-process-description p span {
+.difficult-process-description p i {
+  font-style: normal;
   border-bottom: 1px dotted;
   font-weight: 600;
   cursor: pointer;
@@ -2614,6 +2615,7 @@ img {
   color: #f71717;
   font-weight: 600;
   text-transform: uppercase;
+  line-height: 28px;
 }
 .ins-advantage-item p {
   font-size: 16px;
@@ -2681,6 +2683,9 @@ img {
   font-weight: 600;
   text-align: center;
   color: #0e0b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ins-category-item__can {
   position: absolute;
@@ -2998,6 +3003,9 @@ img {
 }
 .ins-selected-items__total-amount {
   font-weight: 400;
+}
+.ins-selected-items__total-amount i {
+  font-style: normal;
 }
 .text-shadow {
   position: relative;

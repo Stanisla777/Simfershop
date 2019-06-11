@@ -35,7 +35,7 @@
                         Заказали у нас посудомоечную машину и не знаете, как её подключить? Возникли сложности в
                         настройке стиральной машины? Давно мучаетесь с телевизором и не можете подобрать правильный
                         режим? Тогда звоните нам прямо сейчас по телефону <a href="tel:880000000">880000000</a> или
-                        <span>оставьте заявку</span> и мы произведем установку и подключение бытовой техники в Москве и
+                        <i>оставьте заявку</i> и мы произведем установку и подключение бытовой техники в Москве и
                         Московской области с выездом на дом! Оперативная помощь с любыми бытовыми приборами разных марок
                         и моделей.
                     </p>
@@ -1195,8 +1195,8 @@
                     <div class="ins-price-list-table__td">
                         <p>стоимостью более 40000 руб. из готовых блоков</p>
                     </div>
-                    <div style="flex-direction: row;" class="ins-price-list-table__td">
-                        <span style="margin-right: 10px;">10% от стоимости, но не менее </span>
+                    <div style="" class="ins-price-list-table__td">
+                        <span style="">10% от стоимости, но не менее </span>
                         <p>4900 руб.</p>
                     </div>
                     <div class="ins-price-list-table__td checkbox">
@@ -1363,7 +1363,7 @@
                 <p class="ins-selected-items__des">Нет ни одной выбранной позиции</p>
                 <ul class="list-selected-items"></ul>
                 <div class="ins-selected-items__count">
-                    <p class="ins-selected-items__total-amount">Общая сумма монтажных работ: <span>0</span> руб.</p>
+                    <p  class="ins-selected-items__total-amount">Общая сумма монтажных работ: <i>0</i> руб.</p>
                 </div>
             </div>
         </div>
@@ -1408,6 +1408,41 @@
         result = $('.difficult-process-description').offset();
         $('.difficult-process-worker').offset({top:result.top - 154,left:result.left - 130});
 
+        //Блоки одной высыто в блоке виды монтажа
+
+        var maxheight=0;
+        $('.ins-category-item').each(function(){
+            height = $(this).find('.ins-category-item__description p').outerHeight(true);
+
+            if(height>maxheight){
+                maxheight = height
+
+            }
+
+        });
+
+        $('.ins-category-item__description p').height(height);
+
+
+        //Блоки одной высыто в блоке почуму стоит обратиться именно к нам
+
+        function hg() {
+            var maxheight2=0;
+            $('.ins-advantage-item').each(function(){
+                height2 = $(this).find('h3').outerHeight(false);
+
+                if(height2>maxheight2){
+                    maxheight2 = height2
+
+                }
+
+            });
+            $('.ins-advantage-item h3').height(height);
+        }
+        if ($(window).width()<=940){
+            hg();
+        }
+
 
         //Карта
 
@@ -1446,7 +1481,7 @@
 
     //Скрол в нужное место
 
-        $('.difficult-process-description p span').on('click',function(event){
+        $('.difficult-process-description p i').on('click',function(event){
             event.preventDefault();
             $('html, body').animate({ scrollTop: $('.ins-selected-items__des').offset().top+30}, 1000);
         });
@@ -1523,7 +1558,7 @@
                 count = count.replace(/\s/g, '').trim();
                 count = parseInt(count);
                 count_prise = count_prise + count;
-                $('.ins-selected-items__total-amount span').text(count_prise);
+                $('.ins-selected-items__total-amount i').text(count_prise);
 
 
 
@@ -1543,10 +1578,10 @@
                 count = count.replace(/\s/g, '').trim();
                 count = parseInt(count);
                 count_prise = count_prise - count;
-                $('.ins-selected-items__total-amount span').text(count_prise);
+                $('.ins-selected-items__total-amount i').text(count_prise);
             }
 
-            var re = $('.ins-selected-items__total-amount span').text();
+            var re = $('.ins-selected-items__total-amount i').text();
 
             if(re > 0){
                 $('.ins-selected-items__des').text("Вы выбрали следующие позиции:");

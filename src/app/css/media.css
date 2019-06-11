@@ -346,7 +346,87 @@
 
 
 
+/*Медиа для страницы инсталяция*/
+@media screen and (max-width: 800px){
+    .ins-section-advantage .row-3-col__col{
+        width: calc(100%/2 - 10px*2);
+    }
+    .ins-advantage-item {
+        margin-bottom: 20px;
+    }
+    .ins-category-work .row-3-col__col{
+        width: calc(100%/2 - 10px*2);
+    }
+    .ins-category-item__can{
+        display: none;
+    }
 
+}
+@media screen and (max-width: 770px){
+    .ins-wrapper-form{
+        flex-direction: column;
+    }
+    .ins-arrow{
+        display: none;
+    }
+    .ins-call-us{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 630px){
+    .difficult-process-worker{
+        display: none;
+    }
+    .difficult-process-description{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ins-price-list-table p{
+        font-size: 13px;
+    }
+
+    .list-selected-items{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 550px){
+    .ins-category-work .row-3-col__col{
+        width: calc(100%/1 - 10px*2);
+    }
+
+}
+@media screen and (max-width: 500px){
+    .wrapper-difficult-process{
+        margin-top: 15px;
+    }
+    .difficult-process-description{
+        padding: 0;
+        box-shadow: none;
+    }
+    .ins-section-advantage .row-3-col__col{
+        width: calc(100%/1 - 10px*2);
+    }
+    .ins-price-list-table__thead{
+        display: none;
+    }
+    .ins-call-master{
+        width: 100%;
+    }
+    .ins-section-advantage {
+        margin-top: 30px;
+    }
+    .ins-section-price-list {
+        margin-top: 10px;
+    }
+    .ins-wrapper-form{
+        margin-top: 10px;
+    }
+
+}
 
 
 
