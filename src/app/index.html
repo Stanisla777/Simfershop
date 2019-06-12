@@ -26,7 +26,10 @@
 
         <h1 style="text-align: center" class="h1-title">Установка и монтаж</h1>
         <div class="ins-difficult-process">
-            <div style="background-image: url('img6/AllTehniks4.jpg')" class="difficult-process-bacgrond"></div>
+            <div style="background-image: url('img6/AllTehniks1.jpg')" class="difficult-process-bacgrond">
+                <button style="position: absolute;" type="button">Нажмите на меня<br>я тут временно</button>
+            </div>
+
             <div class="wrapper-difficult-process">
                 <div class="difficult-process-worker"></div>
                 <div class="difficult-process-description">
@@ -1404,6 +1407,22 @@
 
 <script>
     $(document).ready(function () {
+
+        var ind=1;
+        $('button').on('click',function () {
+            if(ind<2){
+                ind +=1;
+                // $('.difficult-process-bacgrond').css('background-image','url("img6/AllTehniks'+ind+'.jpg")');
+                console.log(ind)
+            }
+            else {
+                ind=1
+            }
+            $('.difficult-process-bacgrond').css('background-image','url("img6/AllTehniks'+ind+'.jpg")');
+
+        });
+
+
         //Позиция работника
         result = $('.difficult-process-description').offset();
         $('.difficult-process-worker').offset({top:result.top - 154,left:result.left - 130});
