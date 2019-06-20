@@ -2778,24 +2778,24 @@ img {
   font-weight: 600;
 }
 /*Чекбокс*/
-.checkbox input[type="checkbox"] {
+.ins-price-list-table .checkbox input[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
-.checkbox label {
+.ins-price-list-table .checkbox label {
   position: relative;
   display: block;
   padding: 0!important;
   /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
 }
-.checkbox label::before,
-.checkbox label::after {
+.ins-price-list-table .checkbox label::before,
+.ins-price-list-table .checkbox label::after {
   content: "";
   /*Needed for the line-height to take effect*/
   display: inline-block;
 }
 /*Outer box of the fake checkbox*/
-.checkbox label::before {
+.ins-price-list-table .checkbox label::before {
   height: 16px;
   width: 16px;
   border: 1px solid;
@@ -2806,7 +2806,7 @@ img {
   top: 3px;
 }
 /*Checkmark of the fake checkbox*/
-.checkbox label::after {
+.ins-price-list-table .checkbox label::after {
   position: absolute;
   height: 8px;
   width: 17px;
@@ -2817,15 +2817,15 @@ img {
   top: -2px;
 }
 /*Hide the checkmark by default*/
-.checkbox input[type="checkbox"] + label::after {
+.ins-price-list-table .checkbox input[type="checkbox"] + label::after {
   content: none;
 }
 /*Unhide on the checked state*/
-.checkbox input[type="checkbox"]:checked + label::after {
+.ins-price-list-table .checkbox input[type="checkbox"]:checked + label::after {
   content: "";
 }
 /*Adding focus styles on the outer-box of the fake checkbox*/
-.checkbox input[type="checkbox"]:focus + label::before {
+.ins-price-list-table .checkbox input[type="checkbox"]:focus + label::before {
   outline: #3b99fc auto 5px;
 }
 /*Что было выбрано*/
