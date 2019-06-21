@@ -1632,6 +1632,46 @@
         // });
 
 
+        $.ajax({
+            'url': '/Simfershop/src/app/index.html',
+            'type': 'GET',
+            'dataType': "html",
+            'success': function(data){
+
+
+                // var te = $(data).find('.h1-title').text();
+                // $('.h1-title').text(te);
+                var ted = $(data).find('.ins-category-work').text();
+                console.log(ted);
+                // console.log($(data).find('h1').text());
+
+
+            }
+        });
+
+        // if (window.location.pathname.indexOf("html") > -1)
+        // {
+        //     $('body').addClass("body1");
+        // }
+        //
+        // if(window.location.pathname == '/Simfershop/src/app/Installation.html') { $('body').addClass(".body1"); }
+
+
+        // var e = $('head').html();
+        // console.log(e)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
