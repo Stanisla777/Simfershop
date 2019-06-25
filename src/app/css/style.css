@@ -2791,7 +2791,6 @@ img {
 .ins-price-list-table .checkbox label::before,
 .ins-price-list-table .checkbox label::after {
   content: "";
-  /*Needed for the line-height to take effect*/
   display: inline-block;
 }
 /*Outer box of the fake checkbox*/
