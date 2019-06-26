@@ -125,15 +125,14 @@ button:focus {
 .difficult-process-bacgrond:before {
   content: "";
   display: block;
-  padding-top: 39%;
+  padding-top: 43%;
 }
 .difficult-process-description {
   position: relative;
-  width: 84%;
+  width: 100%;
   padding: 25px;
-  margin-left: 120px;
   margin-top: 30px;
-  box-shadow: 0 0 9px 0px #868383;
+  box-shadow: 0 0 11px -3px #868383;
 }
 .difficult-process-description p {
   font-size: 19px;
@@ -162,7 +161,6 @@ button:focus {
 .wrapper-difficult-process {
   position: relative;
   margin-top: 100px;
-  display: flex;
 }
 .difficult-process-worker {
   position: absolute;
@@ -464,7 +462,7 @@ button:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../img6/FormArrow4.png");
+  background-image: url("../img6/FormArrow4schaub.png");
 }
 .ins-arrow:before {
   content: "";
@@ -496,7 +494,12 @@ button:focus {
   margin-top: 15px;
 }
 .ins-call-master {
-  width: 25%;
+  width: 30%;
+  box-shadow: 0 0 9px 3px rgba(254, 73, 70, 0.2);
+  padding: 20px 20px 55px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 30px;
 }
 .ins-call-master input {
   border: 1px solid #8184a1;
@@ -526,18 +529,18 @@ button:focus {
   width: 100%;
   height: 40px;
   color: #fff;
-  background: #de264a;
-  background: -moz-linear-gradient(-45deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
-  background: -webkit-linear-gradient(-45deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
-  background: linear-gradient(135deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#de264a', endColorstr='#dda6b0', GradientType=1);
+  background: #008d55;
+  background: -moz-linear-gradient(-45deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+  background: -webkit-linear-gradient(-45deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+  background: linear-gradient(135deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008d55', endColorstr='#63b84f', GradientType=1);
 }
 .ins-call-master button:hover {
-  background: #dd5a72;
-  background: -moz-linear-gradient(-45deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
-  background: -webkit-linear-gradient(-45deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
-  background: linear-gradient(135deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dd5a72', endColorstr='#de264a', GradientType=1);
+  background: #63b84f;
+  background: -moz-linear-gradient(-45deg, #63b84f 0%, #008d55 69%);
+  background: -webkit-linear-gradient(-45deg, #63b84f 0%, #008d55 69%);
+  background: linear-gradient(135deg, #63b84f 0%, #008d55 69%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b84f', endColorstr='#008d55', GradientType=1);
 }
 .ins-call-master textarea {
   width: 100%;
@@ -653,4 +656,41 @@ button:focus {
   height: 40px;
   left: 50%;
   margin-left: -75px;
+}
+/*Под банером номера*/
+.difficult-process-ads {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 160px;
+}
+.difficult-process-ads__item-active:not(:last-child):before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  box-shadow: 0 0 2px 0 #000;
+}
+.difficult-process-ads__item {
+  border-top: 1px dashed;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px #d6d3d3;
+  /* transform: rotate(90deg); */
+}
+.difficult-process-ads__description {
+  transform: rotate(90deg);
+}
+.difficult-process-ads__description p {
+  font-size: 12px;
+  text-align: center;
+}
+.difficult-process-ads__description p:nth-child(3) {
+  max-width: 140px;
+  margin-top: 6px;
 }
