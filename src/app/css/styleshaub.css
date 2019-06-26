@@ -186,7 +186,7 @@ button:focus {
 .ins-advantage-item h3 {
   font-size: 18px;
   margin: 10px 0;
-  color: #3f575d;
+  color: #f71717;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 28px;
@@ -249,14 +249,14 @@ button:focus {
   padding-top: 70%;
 }
 .ins-category-item__description {
-  background-color: #5a7d86;
+  background-color: #ec4f4f;
 }
 .ins-category-item__description p {
   padding: 10px 0;
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
-  color: #fff;
+  color: #0e0b0b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,11 +317,8 @@ button:focus {
   padding: 0!important;
 }
 .ins-price-list-table__thead {
-  background-color: #55686e;
+  background-color: #f8f6ec;
   font-weight: 600;
-}
-.ins-price-list-table__thead p {
-  color: #fff;
 }
 .ins-price-list-table__tr {
   display: flex;
@@ -637,10 +634,47 @@ button:focus {
 #from {
   display: none;
 }
-.difficult-process-bacgronins-advantage-itemd button {
+.difficult-process-bacgrond button {
   position: absolute;
   width: 150px;
   height: 40px;
   left: 50%;
   margin-left: -75px;
+}
+/*Под банером номера*/
+.difficult-process-ads {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 160px;
+}
+.difficult-process-ads__item-active:not(:last-child):before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  box-shadow: 0 0 2px 0 #000;
+}
+.difficult-process-ads__item {
+  border-top: 1px dashed;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px #d6d3d3;
+  /* transform: rotate(90deg); */
+}
+.difficult-process-ads__description {
+  transform: rotate(90deg);
+}
+.difficult-process-ads__description p {
+  font-size: 12px;
+  text-align: center;
+}
+.difficult-process-ads__description p:nth-child(3) {
+  max-width: 140px;
+  margin-top: 6px;
 }
