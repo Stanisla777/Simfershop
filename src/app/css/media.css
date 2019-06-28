@@ -428,7 +428,21 @@
 
 }
 
+/*Инсталяция для китчена*/
 
+/*@media screen and (max-width: 1250px){*/
+    /*.difficult-process-ads__description{*/
+        /*font-size: 10px;*/
+    /*}*/
+    /*.ins-category-work .row-3-col__col{*/
+        /*width: calc(100%/2 - 10px*2);*/
+    /*}*/
+/*}*/
+/*@media screen and (max-width: 720px){*/
+    /*.difficult-process-ads{*/
+        /*display: none;*/
+    /*}*/
+/*}*/
 
 
 

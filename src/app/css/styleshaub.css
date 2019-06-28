@@ -643,9 +643,10 @@ button:focus {
 }
 /*Под банером номера*/
 .difficult-process-ads {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  /*display: grid;*/
+  /*grid-template-columns: repeat(6, 1fr);*/
   height: 160px;
+  display: flex;
 }
 .difficult-process-ads__item-active:not(:last-child):before {
   content: "";
@@ -657,6 +658,7 @@ button:focus {
   box-shadow: 0 0 2px 0 #000;
 }
 .difficult-process-ads__item {
+  flex-grow: 1;
   border-top: 1px dashed;
   cursor: pointer;
   position: relative;

@@ -1461,12 +1461,6 @@
 <script>
     $(document).ready(function () {
 
-        //Позиция работника
-        // result = $('.difficult-process-description').offset();
-        // $('.difficult-process-worker').offset({top:result.top - 154,left:result.left - 130});
-
-        //Блоки одной высыто в блоке виды монтажа
-
         var maxheight=0;
         $('.ins-category-item').each(function(){
             height = $(this).find('.ins-category-item__description p').outerHeight(true);
@@ -1499,9 +1493,6 @@
         if ($(window).width()<=940){
             hg();
         }
-
-
-
 
         //Поиск услуги
 
@@ -1538,21 +1529,6 @@
             $('html, body').animate({ scrollTop: $('.difficult-process-description').offset().top-10}, 1000);
         });
 
-
-
-
-
-
-        //Анимашка Сможем
-
-
-        // $('.ins-category-item').hover(
-        //     function(){
-        //         $(this).find('.ins-category-item__can').addClass('zoomIn')
-        //     },
-        //     function(){
-        //         $(this).find('.ins-category-item__can').removeClass('zoomIn')
-        //     });
 
         //Чекбоксам задаю id
 
@@ -1644,46 +1620,6 @@
                 $('.ins-selected-items__total-amount').css('font-weight',400)
             }
         });
-
-
-
-
-
-        //Обрезка текста
-        // $(".list-selected-items li").dotdotdot({
-        //     ellipsis: "...",
-        //     wrap: "word",
-        //     fallbackToLetter: true,
-        //     after: null,
-        //     watch: false,
-        //     height: 60,
-        //     tolerance: 0,
-        //     callback: function(isTruncated, orgContent){},
-        //     lastCharacter: {
-        //         remove: [" ", ",", ";", ".", "!", "?"],
-        //         noEllipsis: []
-        //     }
-        // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     })
 
