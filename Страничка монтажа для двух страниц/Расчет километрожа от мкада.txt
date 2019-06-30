@@ -1,6 +1,0 @@
-https://blog.foolsoft.ru/javascript-podschet-rasstoyaniya-mezhdu-dvumya-tochkami-yandex-map/
-
-
-
-Ограничение поиска за Московскую область
-http://webmap-blog.ru/bez-rubriki/api-yandeks-kart-ogranichivaem-oblast-poiska
