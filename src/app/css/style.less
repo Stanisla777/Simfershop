@@ -420,11 +420,12 @@ input:focus, textarea:focus{
     text-align: center;
     margin-top: 10px;
     line-height: 49px;
-    p:nth-child(2){
+    p:nth-child(3){
       font-size: 40px;
     }
     i{
       font-style: normal;
+
       color: red;
       font-size: 53px;
       font-weight: 500;
@@ -535,7 +536,35 @@ input:focus, textarea:focus{
 }
 
 
-
+.sim-guarantees-in-stocks{
+  margin-top: 30px;
+  &__title{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  &__list{
+    margin-top: 20px;
+    li{
+      font-size: 18px;
+      line-height: 24px;
+      display: flex;
+      &:not(:last-child){
+        margin-bottom: 15px;
+      }
+      &:before{
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url("../img8/IconGalka2.png")center no-repeat;
+        background-size: contain;
+        flex-shrink: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
 
 
 

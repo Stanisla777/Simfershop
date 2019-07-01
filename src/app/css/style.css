@@ -387,7 +387,7 @@ textarea:focus {
   margin-top: 10px;
   line-height: 49px;
 }
-.sim-wrapper-stock__paragraph p:nth-child(2) {
+.sim-wrapper-stock__paragraph p:nth-child(3) {
   font-size: 40px;
 }
 .sim-wrapper-stock__paragraph i {
@@ -483,4 +483,33 @@ textarea:focus {
   font-size: 22px;
   line-height: 33px;
   margin-bottom: 26px;
+}
+.sim-guarantees-in-stocks {
+  margin-top: 30px;
+}
+.sim-guarantees-in-stocks__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.sim-guarantees-in-stocks__list {
+  margin-top: 20px;
+}
+.sim-guarantees-in-stocks__list li {
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+}
+.sim-guarantees-in-stocks__list li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.sim-guarantees-in-stocks__list li:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../img8/IconGalka2.png") center no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-right: 10px;
 }
