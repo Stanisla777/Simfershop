@@ -447,6 +447,94 @@
 
 
 
+/*Медиа для карточки товара*/
+@media screen and (max-width: 770px){
+    .sim-wrapper-stock{
+        flex-direction: column;
+    }
+    .sim-wrapper-stock__description {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 700px){
+    .sim-section-advantages .row-2-col__col {
+        width: calc(100%/1 - 10px*2);
+    }
+    .sim-wrapper-video__video{
+        width: 100%;
+    }
+    .sim-capture-form {
+        width: 56%;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .sim-description-scheme {
+
+        justify-content: space-around;
+    }
+    .sim-description-scheme__img{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .sim-description-scheme{
+        display: none;
+    }
+    .sim-wrapper-guarantees{
+        box-shadow: none;
+        border: none;
+    }
+    .sim-wrapper-guarantees__total{
+        display: none;
+    }
+    .sim-capture-form {
+        width: 100%;
+    }
+    .sim-section-margin{
+        margin-top: 15px;
+    }
+    .sim-wrapper-guarantees{
+        padding: 0;
+    }
+    .sim-wrapper-guarantees__list-title{
+        font-size: 15px;
+    }
+    .sim-wrapper-guarantees__list li::before{
+        width: 0;
+        height: 0;
+        margin-right: 0;
+    }
+    .sim-section-stock {
+        margin-top: 20px;
+    }
+
+    .sim-wrapper-stock__paragraph {
+        font-size: 20px;
+        line-height: 38px;
+    }
+    .sim-wrapper-stock__paragraph p:nth-child(3) {
+        font-size: 29px;
+    }
+    .sim-wrapper-stock__paragraph i {
+        font-size: 33px;
+    }
+    .sim-wrapper-stock__paragraph p{
+        display: inline;
+    }
+    .sim-h2-title{
+        margin-bottom: 17px;
+    }
+}
+
+
+
+
 
 
 
