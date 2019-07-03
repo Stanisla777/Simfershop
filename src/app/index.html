@@ -15,12 +15,23 @@
 </head>
 <body>
 
+
+
 <div class="wrap">
 
 
     <div class="container">
         <div class="sim-card-product">
             <div class="section-fon-card"></div>
+
+
+        <div class="card-product-modal">
+            <div class="block">
+                <div class="close-menu"></div>
+
+            </div>
+        </div>
+        <div id="lean_overlay-card"></div>
 
             <div class="sim-section-description sim-section-margin">
                 <h2 class="sim-h2-title">Описание Комбинированная плита Simfer F66GH42117</h2>
@@ -353,17 +364,30 @@
                         <div class="sim-wrapper-guarantees__wish"></div>
                     </div>
 
-                    <div class="sim-wrapper-video">
-                        <h2 class="sim-wrapper-video__title">И на последок видеобзор о товаре</h2>
-                        <div class="sim-wrapper-video__video">
-                            <iframe class="wrapper-video__iframe" width="100%" height="100%" src="https://www.youtube.com/embed/AhPbO5zuCzY?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsimfer.info&amp;widgetid=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-                            </iframe>
+                    <div class="sim-wrapper-certificates row-2-col">
+                        <div class="sim-wrapper-certificates__item row-2-col__col">
+                            <img src="img8/sertif.jpg" alt="">
                         </div>
+                        <div class="sim-wrapper-certificates__item row-2-col__col">
+                            <img src="img8/sertif2.jpg" alt="">
+                        </div>
+
                     </div>
 
 
-
                 </div>
+
+            </div>
+
+            <div class="sim-section-guarantee sim-section-margin">
+                <div class="sim-wrapper-video">
+                    <h2 class="sim-wrapper-video__title">Видеобзор о товаре</h2>
+                    <div class="sim-wrapper-video__video">
+                        <iframe class="wrapper-video__iframe" width="100%" height="100%" src="https://www.youtube.com/embed/AhPbO5zuCzY?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsimfer.info&amp;widgetid=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                        </iframe>
+                    </div>
+                </div>
+
             </div>
 
             <div class="sim-section-stock">
@@ -413,5 +437,87 @@
     </div>
 </div>
 
+
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+    function OffScroll () {
+        var winScrollTop = $(window).scrollTop();
+        $(window).bind('scroll',function () {
+            $(window).scrollTop(winScrollTop);
+        });}
+
+      //Запустили отмену прокрутки
+
+    // $(window).unbind('scroll'); //Выключить отмену прокрутки
+
+
+
+// $('.sim-wrapper-certificates__item').mouseenter(function () {
+//             var src = $(this).find('img').attr('src');
+//             $('.parent').css('display', 'flex').find('.block').html('<img src="' + src + '">');
+//             $('#lean_overlay').show();//фон затемнение
+//     OffScroll ();
+//         });
+//
+//         $('.parent .block').mouseleave(function(){
+//             $('.parent').css('display','none').find('.block').find('img').remove();
+//             $('#lean_overlay').hide();
+//             $(window).unbind('scroll');
+//         });
+
+
+
+        // $('.sim-wrapper-certificates__item').hover(
+        //     function(){
+        //         var src = $(this).find('img').attr('src');
+        //
+        //
+        //         $('.parent').css('display','flex').find('.block').html('<img src="'+src+'">');
+        //         $('#lean_overlay').show();//фон затемнение
+        //     },
+        //     function(){
+        //         // $('.parent').css('display','none');
+        //         $('#lean_overlay').hide();
+        //     });
+
+        function OffScroll () {
+            var winScrollTop = $(window).scrollTop();
+            $(window).bind('scroll',function () {
+                $(window).scrollTop(winScrollTop);
+            });}
+
+
+        $('.sim-wrapper-certificates__item').on('click',function(){//Открываю модально окно по клику
+            OffScroll ()
+            var src = $(this).find('img').attr('src');
+
+
+            $('.card-product-modal').css('display','flex').find('.block').append('<img src="'+src+'">');
+            $('#lean_overlay-card').show();//фон затемнение
+
+
+        });
+
+        $('.close-menu').on('click',function(){//Закрываю модальное окно по клику на крестик
+            $('.card-product-modal').css('display','none').find('.block').find('img').remove();
+            $('#lean_overlay-card').hide();
+            $(window).unbind('scroll');
+        });
+
+
+        $('.card-product-modal').on('click', function (e) {//Закрываю модальное окно по клику рабочей области
+            $('.card-product-modal').css('display','none').find('.block').find('img').remove();
+            $("#lean_overlay-card").hide();
+            $(window).unbind('scroll');
+        }).on('click', '.block', function (e) {//Запрещаю закрывать окно по клику на само молдальное окно
+            e.stopPropagation();
+
+        });
+
+    });
+</script>
 </body>
 </html>
