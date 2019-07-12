@@ -535,6 +535,17 @@
 
 
 
+/*Новости спецпредложения*/
+
+@media screen and (max-width: 950px){
+    .section-container-news .row-2-col__col{
+        width: calc(100%/1 - 10px*2);
+    }
+}
+
+
+
+
 
 
 
