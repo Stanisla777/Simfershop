@@ -1,26 +1,6 @@
 <div class="sim-description-scheme">
         <div class="sim-description-scheme__img">
-            <img src="/upload/images/ImagesCard Product/стеклокерамичиская варка простая.jpg" alt="" title="foto.jpg">
-        </div>
-</div>
-
-
-<div class="sim-description-scheme">
-        <div class="sim-description-scheme__img">
-            <img src="/upload/images/ImagesCard Product/электрическая варка.jpg" alt="" title="foto.jpg">
-        </div>
-</div>
-
-<div class="sim-description-scheme">
-        <div class="sim-description-scheme__img">
-            <img src="/upload/images/ImagesCard Product/электрическая варка сенсор.jpg" alt="" title="foto.jpg">
-        </div>
-</div>
-
-
-<div class="sim-description-scheme">
-        <div class="sim-description-scheme__img">
-            <img src="/upload/images/ImagesCard Product/электрическая варка двойная.jpg" alt="" title="foto.jpg">
+            <img src="/upload/images/ImagesCard Product/стеклокерамичиская варка.jpg" alt="" title="foto.jpg">
         </div>
 </div>
 
@@ -28,7 +8,6 @@
 
 
 
-Электрическая панель Simfer H30E02M011 (1 вариант)
-Электрическая панель Simfer H30D12B001 (2 вариант временный! потом уберу от сюда)
-Электрическая панель Simfer H60D14W011
-Электрическая панель Simfer H45D13B011
+
+
+Усиление резкости изображений с image-rendering
