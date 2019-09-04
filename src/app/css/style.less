@@ -145,588 +145,73 @@ input:focus, textarea:focus{
   margin-right: @margin5;
   margin-bottom: 2*@margin5;
 }
-
-/*Карточка товара*/
-.sim-card-product{
+.container-return-exchange-product{
   p{
-    padding: 0;
-  }
-}
-.section-fon-card{
-  width: 100%;
-  height: 665px;
-  background: url("../img8/FonSection.jpg")center no-repeat;
-  background-size: contain;
-}
-.sim-section-margin{
-  margin-top: 40px;
-}
-
-.sim-h2-title{
-  font-size: 24px;
-  color: #3d4b52;
-  font-weight: 500;
-  line-height: 30px;
-  margin-bottom: 30px;
-}
-.sim-section-description{
-  margin-top: 40px;
-  &__paragraph{
-    font-size: 16px;
-    color: #3d4b52;
-    font-weight: 400;
+    margin: 10px 0;
     line-height: 30px;
   }
-}
-.sim-description-scheme{
-  margin-top: 60px;
-  display: flex;
-  //justify-content: space-around;
-  justify-content: center;
-  align-items: center;
-  &__img{
-    width: 34%;
-    margin-right: 80px;
-    min-width: 240px;
-    img{
-      width: 100%;
-      height: auto;
-    }
-
+  b{
+    font-weight: 500;
   }
-  &__designations{
-    //width: calc(100% - 40% - 60px);
-    width: max-content;
-    ol{
-      list-style-type: decimal;
-      list-style-position: inside;
-      li{
+}
+.ex-section{
+  &:not(.ex-section-introduction){
+    //margin-top: 40px;
+  }
+}
+.ex-section {
+  &__list {
+    margin-top: 15px;
+    li {
+      font-size: 18px;
+      display: flex;
+      &:not(:last-child) {
         margin-bottom: 10px;
       }
-    }
-  }
-}
-.sim-wrapper-advantages{
-  &__item{
-    &:not(:last-child){
-      margin-bottom: 30px;
-    }
-  }
-  &__header{
-    display: flex;
-    align-items: center;
-  }
-  &__icon{
-    width: 43px;
-    height: 43px;
-    margin-right: 13px;
-    img{
-      max-width: 100%;
-      height: auto;
-    }
-
-  }
-  &__title{
-    font-size: 18px;
-    font-weight: 500;
-    color: #48555d;
-    line-height: 25px;
-  }
-  &__description{
-    margin-top: 7px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #000;
-  }
-}
-
-
-/*2 вариант*/
-.sim-section-advantages .row-2-col{
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -@margin10;
-  margin-right:-@margin10;
-}
-.sim-section-advantages .row-2-col__col {
-  position: relative;
-  width: calc(100%/2 - @margin10*2);
-  margin-left: @margin10;
-  margin-right: @margin10;
-  margin-bottom: 2*@margin10;
-}
-.sim-wrapper-advantages2{
-
-  &__item{
-    background-color: #f6f6f6;
-    padding: 20px;
-  }
-  &__header{
-    display: flex;
-    align-items: center;
-  }
-  &__icon{
-    width: 43px;
-    height: 43px;
-    margin-right: 13px;
-    img{
-      max-width: 100%;
-      height: auto;
-    }
-
-  }
-  &__title{
-    font-size: 18px;
-    font-weight: 500;
-    color: #48555d;
-  }
-  &__description{
-    margin-top: 7px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #000;
-  }
-}
-.sim-section-guarantee{
-
-}
-.sim-wrapper-guarantees{
-  background-color: #f8f6f7;
-  padding: 30px 22px 80px;
-  width: 100%;
-  border: 4px solid #c70000;
-  border-radius: 7px;
-  //outline: 4px solid #c70000;
-  //outline-offset: -17px;
-  box-shadow: 2px 2px 6px 1px rgba(109, 4, 4, 0.4), inset 0 0 4px 0.2px #403e3e;
-  &__title{
-    width: 90%;
-    margin: 0 auto;
-    font-size: 24px;
-    color: #3d4b52;
-    font-weight: 500;
-    text-align: center;
-    border-bottom: 12px solid #adabab;
-    padding-bottom: 30px;
-
-  }
-  &__list{
-    width: 85%;
-    margin: 40px auto 0;
-    li{
-      display: flex;
-      &:not(:last-child){
-        margin-bottom: 20px;
-      }
-      &::before{
+      &:before {
+        margin-right: 10px;
+        margin-top: 3px;
         content: "";
         display: block;
-        width: 20px;
+        width: 21px;
         height: 21px;
-        background: url(../img8/IconGalka.png) center no-repeat;
         background-size: contain;
-        margin-right: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img9/Haken.png);
         flex-shrink: 0;
       }
     }
-  }
-  &__list-title{
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  &__list-description{
-    font-size: 16px;
-    font-weight: 500;
-  }
 
-  &__total{
-    display: flex;
-    align-items: flex-start;
-    width: 62%;
-    margin: 17px auto;
   }
-  &__icon-pensil{
-    width: 115px;
-    height: 107px;
-    background: url(../img8/PensilAndGalka.png) center no-repeat;
-    background-size: contain;
-  }
-  &__wish{
-    margin-top: 0;
-    width: 40%;
-    min-width: 170px;
-    position: relative;
-    background: url(../img8/Wish.png) center no-repeat;
-    background-size: contain;
-    align-self: flex-end;
-    margin-left: -30px;
-    &:before{
-      content: "";
-      display: block;
-      padding-top: 25%;
-    }
-  }
-}
-
-.sim-wrapper-video{
-  margin-top: 20px;
-  &__video {
-    position: relative;
-    width: 70%;
-    //margin: 25px auto 0;
-    margin-top: 25px;
-    box-shadow: 0 0 9px 4px #3c3b3b;
-    &::before {
-      content: "";
-      display: block;
-      padding-top: 56%;
-    }
-  }
-  &__title{
-    font-size: 24px;
-    color: #3d4b52;
-    font-weight: 500;
-    text-align: center;
-  }
-  iframe{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-.sim-section-stock{
-  margin-top: 60px;
-  &__title{
-    text-align: center;
-    padding: 0;
-    font-size: 47px;
-    font-weight: 500;
-  }
-}
-.sim-call-for-action{
-  font-size: 20px;
-  line-height: 37px;
-  margin-top: 20px;
-  text-align: center;
-  font-weight: 500;
-  .sim-stock{
-    color: #000;
-    font-size: 20px;
-  }
-  i{
-    font-style: normal;
-    color: red;
-    font-size: 42px;
-    font-weight: 500;
-  }
-
-}
-.sim-wrapper-stock{
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  //align-items: center;
-  &__description{
-    //width: 48%;
-  }
-  &__title{
-    font-size: 45px;
-    font-weight: 500;
-    color: #3d4b52;
-    text-align: center;
-  }
-  &__paragraph{
-    font-size: 25px;
-    font-weight: 400;
-    color: #3d4b52;
-    text-align: center;
-    margin-top: 10px;
-    line-height: 49px;
-    p:nth-child(3){
-      font-size: 40px;
-    }
-    i{
-      font-style: normal;
-
-      color: red;
-      font-size: 53px;
+  &__list-documents{
+    li{
       font-weight: 500;
     }
   }
-}
-
-
-
-.sim-capture-form{
-  width: 40%;
-  min-width: 280px;
-
-  input {
-    border: 1px solid #8184a1;
-    //width: calc((100% - 200px) / 3);
-    width: 100%;
-
-    height: 40px !important;
-    position: relative;
-    display: block;
-    padding-left: 20px;
-    outline: none;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    color: #000;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-
-
-  }
-  button{
-    font-family: "Open Sans", sans-serif;
-    cursor: pointer;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    height: 40px;
-    color: #fff;
-
-    background: #de264a;
-    background: -moz-linear-gradient(-45deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
-    background: -webkit-linear-gradient(-45deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
-    background: linear-gradient(135deg, #cb2243 0%, #e55d76 36%, #f22951 69%, #fe2b55 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de264a', endColorstr='#dda6b0',GradientType=1 );
-    &:hover{
-      background: #dd5a72;
-      background: -moz-linear-gradient(-45deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
-      background: -webkit-linear-gradient(-45deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
-      background: linear-gradient(135deg, #fe2b55 0%, #f22951 36%, #e55d76 69%, #cb2243 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd5a72', endColorstr='#de264a',GradientType=1 );
-    }
-
-
-
-  }
-  textarea{
-    width: 100%;
-    height: 100px;
-    min-width: 280px;
-    position: relative;
-    display: block;
-    padding-left: 20px;
-    padding-top: 20px;
-    outline: none;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    color: #000;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    border-radius: 4px;
-    resize: none;
-    margin-bottom: 20px;
-  }
-  input:focus,
-  textarea:focus {
-    outline: none;
-  }
-  input::-moz-placeholder {
-    color: #767676;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  input::-webkit-input-placeholder {
-    color: #767676;
-    font-size: 16px;
-    font-weight: 500;
-  }
-
 
 }
-.sim-capture-form-stock{
-  background-color: #f1f6f7;
-  padding: 38px 17px;
-  border-radius: 10px;
-}
-.sim-capture-form__title{
-  text-align: center;
-  font-size: 22px;
-  line-height: 33px;
-  margin-bottom: 26px;
-}
 
-
-.sim-guarantees-in-stocks{
-  width: 50%;
-
-  &__title{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-  }
-  &__list{
-    margin-top: 20px;
-    li{
-      font-size: 18px;
-      line-height: 24px;
-      display: flex;
-      &:not(:last-child){
-        margin-bottom: 30px;
-      }
-      &:before{
-        content: "";
-        display: block;
-        width: 30px;
-        height: 30px;
-        background: url("../img8/IconGalka2.png")center no-repeat;
-        background-size: contain;
-        flex-shrink: 0;
-        margin-right: 10px;
-      }
-    }
-  }
-}
-
-/*Сертификаты*/
-
-.sim-wrapper-certificates{
-  margin-top: 70px;
-  .row-2-col{
-    display: flex;
-    //align-items: flex-start;
-    flex-wrap: wrap;
-    margin-left: -@margin20;
-    margin-right:-@margin20;
-  }
-
-  .row-2-col__col {
-    position: relative;
-    width: calc(100%/2 - @margin20*2);
-    margin-left: @margin20;
-    margin-right: @margin20;
-    margin-bottom: 2*@margin20;
-  }
-  &__item{
-    position: relative;
-    width: 50%;
-    margin: 40px auto 0;
-    line-height: 0;
-    cursor: pointer;
-    box-shadow: 0 0 6px 1px #757272;
-    border: 10px solid #757272;
-    -moz-border-image: url(../img8/ramka.png) 10 round round;
-    -webkit-border-image: url(../img8/ramka.png) 10 round round;
-    -o-border-image: url(../img8/ramka.png) 10 round round;
-    border-image: url(../img8/ramka.png) 10 round round;
-    overflow: hidden;
-    &:hover{
-      box-shadow: 0 0 6px 2px #5e5c5c;
-    }
-    img{
-      //position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
-    //&:before{
-    //  content: "";
-    //  display: block;
-    //  padding-top: 71%;
-    //}
-  }
-}
-
-/*Окно для сертификатов*/
-.card-product-modal {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  //display: flex;
+.ex-wrapper-title{
+  display: flex;
   align-items: center;
-  align-content: center;
-  justify-content: center;
-  overflow: auto;
-  z-index: 1100;
-  display: none;
-
-  .block {
-    background-color: transparent;
-    line-height: 0;
-    position: relative;
-    width: 45%;
-    box-shadow: 0 0 5px;
-    img {
-      width: 100%;
-      height: auto;
-
-    }
-  }
-
-  .close-menu{
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    right: -8px;
-    top: -8px;
-    font-size: 20px;
-    background-position: center;
+  margin: 20px 0;
+  &__icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(../img3/IconClose.png);
-    cursor: pointer;
-    z-index: 10;
+    background-position: center;
+  }
+  h2{
+    font-size: 22px;
+    font-weight: 500;
+    color: #dc1d43;
   }
 }
-
-
-
-#lean_overlay-card {
-  position: fixed;
-  z-index:1000;
-  top: 0;
-  left: 0;
-  height:100%;
-  width:100%;
-  background: rgba(0, 0, 0, 0.45);
-  display: none;
+.ex-telephone-numbers{
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 30px!important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
