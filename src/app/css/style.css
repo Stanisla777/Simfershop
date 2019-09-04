@@ -140,15 +140,19 @@ textarea:focus {
 .container-return-exchange-product p {
   margin: 10px 0;
   line-height: 30px;
+  padding: 0;
 }
 .container-return-exchange-product b {
   font-weight: 500;
 }
 .ex-section__list {
   margin-top: 15px;
+  margin-bottom: 0;
+  padding: 0;
 }
 .ex-section__list li {
   font-size: 18px;
+  line-height: 30px;
   display: flex;
 }
 .ex-section__list li:not(:last-child) {
@@ -156,7 +160,7 @@ textarea:focus {
 }
 .ex-section__list li:before {
   margin-right: 10px;
-  margin-top: 3px;
+  margin-top: 7px;
   content: "";
   display: block;
   width: 21px;
@@ -179,14 +183,15 @@ textarea:focus {
   width: 50px;
   height: 50px;
   margin-right: 20px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .ex-wrapper-title h2 {
   font-size: 22px;
   font-weight: 500;
-  color: #dc1d43;
+  color: #343436;
+  padding: 0;
 }
 .ex-telephone-numbers {
   font-size: 20px;

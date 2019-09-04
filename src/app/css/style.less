@@ -149,6 +149,7 @@ input:focus, textarea:focus{
   p{
     margin: 10px 0;
     line-height: 30px;
+    padding: 0;
   }
   b{
     font-weight: 500;
@@ -162,15 +163,18 @@ input:focus, textarea:focus{
 .ex-section {
   &__list {
     margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
     li {
       font-size: 18px;
+      line-height: 30px;
       display: flex;
       &:not(:last-child) {
         margin-bottom: 10px;
       }
       &:before {
         margin-right: 10px;
-        margin-top: 3px;
+        margin-top: 7px;
         content: "";
         display: block;
         width: 21px;
@@ -200,14 +204,15 @@ input:focus, textarea:focus{
     width: 50px;
     height: 50px;
     margin-right: 20px;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
   h2{
     font-size: 22px;
     font-weight: 500;
-    color: #dc1d43;
+    color: #343436;
+    padding: 0;
   }
 }
 .ex-telephone-numbers{
