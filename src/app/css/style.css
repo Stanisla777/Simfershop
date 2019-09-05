@@ -198,3 +198,45 @@ textarea:focus {
   font-weight: 500;
   margin-top: 30px!important;
 }
+
+
+
+
+
+
+
+.wrapper-collections .owl-nav div {
+  outline: none;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  width: 60px;
+  height: 30px;
+  background-position: center!important;
+  background-repeat: no-repeat !important;
+  background-size: contain!important;
+}
+.wrapper-collections .owl-next {
+  left: 0;
+  background-image: url(/upload/images/ArrowRight.png) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
