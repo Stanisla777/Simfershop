@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container">
+
+        <div class="box" style="width: 100px;height: 100px;background-color: red;margin-bottom: 20px;"></div>
+        <div class="box" style="width: 100px;height: 100px;background-color: red;margin-bottom: 20px;"></div>
+        <div class="box" style="width: 100px;height: 100px;background-color: red;margin-bottom: 20px;"></div>
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<script>
+
+
+
+    $(document).ready(function () {
+
+
+
+
+        class Box{
+            constructor()
+            {
+                this.data={
+                    age:0,
+                    name:""
+
+                }
+            }
+
+            setChange(object){
+                this.data=object;
+            }
+            getChange(){
+                return this.data
+            }
+
+
+            consoleLog(){
+
+               this.someMethod()
+            }
+
+            setMethod(){
+
+                this.setChange(20);
+            }
+
+            someMethod(){
+                // this.setMethod();
+            }
+
+            static instance(obj) {
+                return new Box(obj);
+            }
+        }
+
+
+
+
+
+
+
+        // $(".box").on('click', function () {
+        //     // Box.instance({
+        //     //     el: $(this),
+        //     //     text: '123123'
+        //     // }).method();
+        //
+        //
+        // })
+
+
+        $(".box").on('click', function () {
+            Box.instance().someMethod();
+
+
+        })
+
+
+
+
+
+
+    })
+</script>
+</body>
+</html>
