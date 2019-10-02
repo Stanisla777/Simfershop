@@ -145,36 +145,93 @@ input:focus, textarea:focus{
   margin-right: @margin5;
   margin-bottom: 2*@margin5;
 }
-.container-return-exchange-product{
-  p{
-    margin: 10px 0;
+.container-payment-and-delivery{
+
+  p {
+    margin-top: 10px;
     line-height: 30px;
     padding: 0;
   }
+
+  //p:not(:last-child){
+  //  margin-bottom: 10px;
+  //}
   b{
     font-weight: 500;
   }
 }
-.ex-section{
-  &:not(.ex-section-introduction){
-    //margin-top: 40px;
+.pay-section{
+  &:not(.section-payment-methods){
+    margin-top: 25px;
   }
 }
-.ex-section {
-  &__list {
-    margin-top: 15px;
+.pay-section {
+  ul{
     margin-bottom: 0;
     padding: 0;
+    margin-top: 10px;
+    li {
+      &:before {
+        margin-right: 10px;
+        content: "";
+        display: block;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+      }
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .pay-section__list {
     li {
       font-size: 18px;
       line-height: 30px;
       display: flex;
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
+
       &:before {
-        margin-right: 10px;
+        width: 21px;
+        height: 21px;
         margin-top: 7px;
+        background-image: url(../img10/galochka.png);
+      }
+    }
+
+  }
+
+  h2{
+    font-size: 22px;
+    font-weight: 500;
+    color: #343436;
+    padding: 0;
+  }
+
+  h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #343436;
+    padding: 0;
+  }
+}
+.payment-methods-list{
+  //margin-left: 10px;
+  li{
+    font-size: 18px;
+    line-height: 27px;
+    p{
+      margin: 0;
+    }
+    p:first-child{
+      font-size: 16px;
+      color: #2e2e2e;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      &:before{
+        margin-right: 10px;
         content: "";
         display: block;
         width: 21px;
@@ -182,41 +239,86 @@ input:focus, textarea:focus{
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url(../img9/Haken.png);
-        flex-shrink: 0;
+        background-image: url(../img10/galochka.png);
       }
     }
 
   }
-  &__list-documents{
-    li{
-      font-weight: 500;
+
+
+}
+
+.pay-section__list-black{
+
+  li{
+    display: flex;
+    &:before{
+      margin-top: 3px;
+      width: 16px;
+      height: 16px;
+      background-image: url(../img10/иконка-галочка-2.png);
+    }
+
+  }
+}
+.payment-online-sheet-list{
+  margin-left: 20px;
+}
+.pay-section-conditions{
+  &__credit-term{
+    p:last-child{
+      margin-top: -15px;
     }
   }
-
-}
-
-.ex-wrapper-title{
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  &__icon{
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  margin-top: 10px;
+  h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #fd2650;
   }
-  h2{
-    font-size: 22px;
+  ul{
+    p{
+      b{
+        font-style: italic;
+      }
+    }
+  }
+}
+.pay-link-simfer{
+  position: relative;
+  display: inline;
+  color: #fd2650;
+  &:link,a:visited,&:hover{
+    color: #fd2650;
+  }
+  text-decoration: none;
+  &:after{
+    content: "";
+    position: absolute;
+    width: 88%;
+    border-bottom: 1px dashed;
+    bottom: 0;
+    left: 9px;
+  }
+}
+.pay-important-information{
+  margin-top: 35px;
+  border-top: 1px solid rgb(145, 145, 145);
+  border-bottom: 1px solid rgb(145, 145, 145);
+  &__title{
+    color: #fd2650;
+    font-size: 24px;
+  }
+  p:not(.pay-important-information__title){
     font-weight: 500;
-    color: #343436;
-    padding: 0;
+    margin-left: 30px;
   }
 }
-.ex-telephone-numbers{
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 30px!important;
+
+.pay-section-tariffs{
+  p{
+    line-height: 24px;
+    margin: 20px 0;
+  }
+
 }

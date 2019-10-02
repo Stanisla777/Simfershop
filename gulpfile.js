@@ -18,13 +18,13 @@ const config = {
     app:'/app',
     css: {
         css:'/app/css',
-        watch:'/app/css/*.less',
+        watch:'/app/css/style.less',
         src: '/app/css/style.less',
         img: '/app/img',
         dist: '/dist/css'
     },
     html: {
-        src: '/app/*.html',
+        src: '/app/index.html',
         src_dist: '/dist'
 
 

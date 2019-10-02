@@ -137,30 +137,74 @@ textarea:focus {
   margin-right: 5px;
   margin-bottom: 10px;
 }
-.container-return-exchange-product p {
-  margin: 10px 0;
+.container-payment-and-delivery p {
+  margin-top: 10px;
   line-height: 30px;
   padding: 0;
 }
-.container-return-exchange-product b {
+.container-payment-and-delivery b {
   font-weight: 500;
 }
-.ex-section__list {
-  margin-top: 15px;
+.pay-section:not(.section-payment-methods) {
+  margin-top: 25px;
+}
+.pay-section ul {
   margin-bottom: 0;
   padding: 0;
+  margin-top: 10px;
 }
-.ex-section__list li {
+.pay-section ul li:before {
+  margin-right: 10px;
+  content: "";
+  display: block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+.pay-section ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.pay-section .pay-section__list li {
   font-size: 18px;
   line-height: 30px;
   display: flex;
 }
-.ex-section__list li:not(:last-child) {
-  margin-bottom: 10px;
-}
-.ex-section__list li:before {
-  margin-right: 10px;
+.pay-section .pay-section__list li:before {
+  width: 21px;
+  height: 21px;
   margin-top: 7px;
+  background-image: url(../img10/galochka.png);
+}
+.pay-section h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #343436;
+  padding: 0;
+}
+.pay-section h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #343436;
+  padding: 0;
+}
+.payment-methods-list li {
+  font-size: 18px;
+  line-height: 27px;
+}
+.payment-methods-list li p {
+  margin: 0;
+}
+.payment-methods-list li p:first-child {
+  font-size: 16px;
+  color: #2e2e2e;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.payment-methods-list li p:first-child:before {
+  margin-right: 10px;
   content: "";
   display: block;
   width: 21px;
@@ -168,75 +212,67 @@ textarea:focus {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../img9/Haken.png);
-  flex-shrink: 0;
+  background-image: url(../img10/galochka.png);
 }
-.ex-section__list-documents li {
-  font-weight: 500;
-}
-.ex-wrapper-title {
+.pay-section__list-black li {
   display: flex;
-  align-items: center;
+}
+.pay-section__list-black li:before {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img10/иконка-галочка-2.png);
+}
+.payment-online-sheet-list {
+  margin-left: 20px;
+}
+.pay-section-conditions {
+  margin-top: 10px;
+}
+.pay-section-conditions__credit-term p:last-child {
+  margin-top: -15px;
+}
+.pay-section-conditions h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fd2650;
+}
+.pay-section-conditions ul p b {
+  font-style: italic;
+}
+.pay-link-simfer {
+  position: relative;
+  display: inline;
+  color: #fd2650;
+  text-decoration: none;
+}
+.pay-link-simfer:link,
+.pay-link-simfer a:visited,
+.pay-link-simfer:hover {
+  color: #fd2650;
+}
+.pay-link-simfer:after {
+  content: "";
+  position: absolute;
+  width: 88%;
+  border-bottom: 1px dashed;
+  bottom: 0;
+  left: 9px;
+}
+.pay-important-information {
+  margin-top: 35px;
+  border-top: 1px solid #919191;
+  border-bottom: 1px solid #919191;
+}
+.pay-important-information__title {
+  color: #fd2650;
+  font-size: 24px;
+}
+.pay-important-information p:not(.pay-important-information__title) {
+  font-weight: 500;
+  margin-left: 30px;
+}
+.pay-section-tariffs p {
+  line-height: 24px;
   margin: 20px 0;
 }
-.ex-wrapper-title__icon {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.ex-wrapper-title h2 {
-  font-size: 22px;
-  font-weight: 500;
-  color: #343436;
-  padding: 0;
-}
-.ex-telephone-numbers {
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 30px!important;
-}
-
-
-
-
-
-
-
-.wrapper-collections .owl-nav div {
-  outline: none;
-  border: none;
-  display: block;
-  position: absolute;
-  top: 50%;
-  margin-top: -15px;
-  width: 60px;
-  height: 30px;
-  background-position: center!important;
-  background-repeat: no-repeat !important;
-  background-size: contain!important;
-}
-.wrapper-collections .owl-next {
-  left: 0;
-  background-image: url(/upload/images/ArrowRight.png) !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
